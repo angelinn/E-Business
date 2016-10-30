@@ -115,6 +115,10 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\Utilities.cs" />
+    <Compile Include="DataAccess\CatalogAccess.cs" />
+    <Compile Include="DataAccess\GenericDataAccess.cs" />
+    <Compile Include="DataAccess\VacationReservationsConfiguration.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
