@@ -40,6 +40,15 @@ namespace VacationReservations {
         protected global::VacationReservations.UserControls.DepartmentUserControl DepartmentUserControl1;
         
         /// <summary>
+        /// CategoriesList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::VacationReservations.UserControls.CategoriesList CategoriesList;
+        
+        /// <summary>
         /// HeaderLink control.
         /// </summary>
         /// <remarks>

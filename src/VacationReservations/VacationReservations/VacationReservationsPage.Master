@@ -1,6 +1,8 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="VacationReservationsPage.master.cs" Inherits="VacationReservations.VacationReservationsPage" %>
 
 <%@ Register src="UserControls/DepartmentUserControl.ascx" tagname="DepartmentUserControl" tagprefix="uc1" %>
+<%@ Register src="UserControls/CategoriesList.ascx" tagprefix="uc1" tagname="CategoriesList" %>
+
 
 <!DOCTYPE html>
 
@@ -16,8 +18,8 @@
             <div class="Main">
                 <div class="Left">
                     <div class="Container">
-                        Place list of departments here
                         <uc1:DepartmentUserControl ID="DepartmentUserControl1" runat="server" />
+                        <uc1:CategoriesList runat="server" id="CategoriesList" />
                     </div>
                 </div>
                 <div class="Right">
