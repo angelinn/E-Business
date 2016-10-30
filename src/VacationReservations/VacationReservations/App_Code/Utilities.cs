@@ -4,9 +4,9 @@ using System.Linq;
 using System.Net;
 using System.Net.Mail;
 using System.Web;
-using VacationReservations.DataAccess;
+using VacationReservations.App_Code.DataAccess;
 
-namespace VacationReservations.Common
+namespace VacationReservations.App_Code
 {
     public static class Utilities
     {

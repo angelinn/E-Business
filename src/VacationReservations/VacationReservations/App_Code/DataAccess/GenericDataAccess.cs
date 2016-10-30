@@ -4,9 +4,8 @@ using System.Data;
 using System.Data.Common;
 using System.Linq;
 using System.Web;
-using VacationReservations.Common;
 
-namespace VacationReservations.DataAccess
+namespace VacationReservations.App_Code.DataAccess
 {
     public static class GenericDataAccess
     {
@@ -65,5 +64,6 @@ namespace VacationReservations.DataAccess
             // Return the initialized command object
             return comm;
         }
-    }
+    }
+
 }

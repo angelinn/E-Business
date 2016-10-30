@@ -116,11 +116,11 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\Link.cs" />
-    <Compile Include="Common\Utilities.cs" />
-    <Compile Include="DataAccess\CatalogAccess.cs" />
-    <Compile Include="DataAccess\GenericDataAccess.cs" />
-    <Compile Include="DataAccess\VacationReservationsConfiguration.cs" />
+    <Compile Include="App_Code\Link.cs" />
+    <Compile Include="App_Code\Utilities.cs" />
+    <Compile Include="App_Code\DataAccess\CatalogAccess.cs" />
+    <Compile Include="App_Code\DataAccess\GenericDataAccess.cs" />
+    <Compile Include="App_Code\DataAccess\VacationReservationsConfiguration.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

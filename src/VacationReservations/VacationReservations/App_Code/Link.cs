@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace VacationReservations.Common
+namespace VacationReservations.App_Code
 {
     public class Link
     {
@@ -26,7 +26,7 @@ namespace VacationReservations.Common
             if (page == "1")
                 return BuildAbsolute(String.Format("Catalog.aspx?DepartmentID={0}", departmentId));
 
-            return BuildAbsolute(String.Format("Catalog.aspx?DepartmentID={0}&Page {1}", departmentId, page));
+            return BuildAbsolute(String.Format("Catalog.aspx?DepartmentID={0}&Page={1}", departmentId, page));
         }
         // Generate a department URL for the first page
         public static string ToDepartment(string departmentId)
