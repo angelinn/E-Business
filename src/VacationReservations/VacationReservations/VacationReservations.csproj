@@ -98,6 +98,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="UserControls\DepartmentUserControl.ascx" />
     <Content Include="VacationReservationsPage.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -116,11 +117,11 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Code\Link.cs" />
-    <Compile Include="App_Code\Utilities.cs" />
-    <Compile Include="App_Code\DataAccess\CatalogAccess.cs" />
-    <Compile Include="App_Code\DataAccess\GenericDataAccess.cs" />
-    <Compile Include="App_Code\DataAccess\VacationReservationsConfiguration.cs" />
+    <Compile Include="Common\Link.cs" />
+    <Compile Include="Common\Utilities.cs" />
+    <Compile Include="DataAccess\CatalogAccess.cs" />
+    <Compile Include="DataAccess\GenericDataAccess.cs" />
+    <Compile Include="DataAccess\VacationReservationsConfiguration.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -132,6 +133,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\DepartmentUserControl.ascx.cs">
+      <DependentUpon>DepartmentUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\DepartmentUserControl.ascx.designer.cs">
+      <DependentUpon>DepartmentUserControl.ascx</DependentUpon>
+    </Compile>
     <Compile Include="VacationReservationsPage.Master.cs">
       <DependentUpon>VacationReservationsPage.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

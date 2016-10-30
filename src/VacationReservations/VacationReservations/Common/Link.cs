@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace VacationReservations.App_Code
+namespace VacationReservations.Common
 {
     public class Link
     {

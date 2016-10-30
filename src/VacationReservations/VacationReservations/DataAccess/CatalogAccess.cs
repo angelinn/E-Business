@@ -5,7 +5,7 @@ using System.Data.Common;
 using System.Linq;
 using System.Web;
 
-namespace VacationReservations.App_Code.DataAccess
+namespace VacationReservations.DataAccess
 {
     public static class CatalogAccess
     {

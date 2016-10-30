@@ -4,8 +4,9 @@ using System.Data;
 using System.Data.Common;
 using System.Linq;
 using System.Web;
+using VacationReservations.Common;
 
-namespace VacationReservations.App_Code.DataAccess
+namespace VacationReservations.DataAccess
 {
     public static class GenericDataAccess
     {
