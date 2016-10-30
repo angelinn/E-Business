@@ -107,6 +107,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Themes\VacationReservationsDefault\VacationReservations.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="scripts\ai.0.22.19-build00125.js" />
