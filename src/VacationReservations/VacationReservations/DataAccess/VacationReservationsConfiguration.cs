@@ -11,10 +11,17 @@ namespace VacationReservations.DataAccess
         private static string dbConnectionString;
         private static string dbProviderName;
 
+        private readonly static int productsPerPage;
+        private readonly static int productDescriptionLength;
+        private readonly static string siteName;
+
         static VacationReservationsConfiguration()
         {
             dbConnectionString = ConfigurationManager.ConnectionStrings["VacationReservationsConnection"].ConnectionString;
             dbProviderName = ConfigurationManager.ConnectionStrings["VacationReservationsConnection"].ProviderName;
+            Int32.Parse(ConfigurationManager.AppSettings["ProductsPerPage"]);
+            productDescriptionLength = Int32.Parse(ConfigurationManager.AppSettings["ProductDescriptionLength"]);
+            siteName = ConfigurationManager.AppSettings["SiteName"];
         }
 
         public static string DbConnectionString
@@ -79,6 +86,30 @@ namespace VacationReservations.DataAccess
             get
             {
                 return ConfigurationManager.AppSettings["ErrorLogEmail"];
+            }
+        }
+
+        public static int ProductsPerPage
+        {
+            get
+            {
+                return productsPerPage;
+            }
+        }
+
+        public static int ProductDescriptionLength
+        {
+            get
+            {
+                return productDescriptionLength;
+            }
+        }
+
+        public static string SiteName
+        {
+            get
+            {
+                return siteName;
             }
         }
     }
