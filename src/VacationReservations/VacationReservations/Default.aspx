@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="VacationReservations.Default" MasterPageFile="~/VacationReservationsPage.Master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="VacationReservations.Default" MasterPageFile="~/VacationReservationsPage.Master" Title="Резервации за почивка" %>
 
 <script runat="server">
 </script>
