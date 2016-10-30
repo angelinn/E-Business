@@ -51,7 +51,7 @@ namespace VacationReservations.Common
                 string to = VacationReservationsConfiguration.ErrorLogEmail;
                 string subject = "BalloonShop Error Report";
                 string body = errorMessage;
-                SendMail(from, to, subject, body);
+                //SendMail(from, to, subject, body);
             }
         }
     }

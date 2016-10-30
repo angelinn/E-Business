@@ -23,7 +23,7 @@
                 <div class="Right">
                     <div class="Header">
                         <asp:HyperLink ID="HeaderLink"
-                            ImageUrl="~/Images/BalloonShopLogo.png" runat="server"
+                            ImageUrl="~/Images/sample_tourism.jpg" runat="server"
                             NavigateUrl="~/" ToolTip="BalloonShop Logo" />
                     </div>
                     <div class="Contents">
