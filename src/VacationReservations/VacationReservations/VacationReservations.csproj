@@ -105,6 +105,7 @@
     <Content Include="Product.aspx" />
     <Content Include="Sql\CatalogGetCategoryDetails.sql" />
     <Content Include="Sql\CatalogGetDepartmentDetails.sql" />
+    <Content Include="Sql\CatalogGetProductAttributeValues.sql" />
     <Content Include="Sql\CatalogGetProductsInGategory.sql" />
     <Content Include="Sql\CatalogGetProductsOnDeptPromo.sql" />
     <Content Include="Sql\CatalogGetProductsOnFrontPromo.sql" />

@@ -269,5 +269,21 @@ namespace VacationReservations.DataAccess
             // return the page of products
             return table;
         }
+
+        public static DataTable GetProductAttributes(string productId)
+        {
+            // get a configured DbCommand object
+            DbCommand comm = GenericDataAccess.CreateCommand();
+            // set the stored procedure name
+            comm.CommandText = "CatalogGetProductAttributeValues";
+            // create a new parameter
+            DbParameter param = comm.CreateParameter();
+            param.ParameterName = "@ProductID";
+            param.Value = productId;
+            param.DbType = DbType.Int32;
+            comm.Parameters.Add(param);
+            // execute the stored procedure and return the results
+            return GenericDataAccess.ExecuteSelectCommand(comm);
+        }
     }
 }

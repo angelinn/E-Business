@@ -77,7 +77,7 @@ a.DepartmentSelected {
     color: Black;
 }
 
-CategoriesList {
+.CategoriesList {
     border: #ea6d00 1px solid;
     text-align: center;
     margin-top: 20px;
@@ -128,4 +128,9 @@ a.CategorySelected {
     font-size: 15px;
     font-weight: bold;
     margin: 10px 1px 0 0;
+}
+
+.DetailSection {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }

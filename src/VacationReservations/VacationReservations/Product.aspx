@@ -19,4 +19,7 @@
         <asp:Label CssClass="ProductPrice" ID="priceLabel" runat="server"
             Text="Label"></asp:Label>
     </p>
+    <p>
+        <asp:PlaceHolder ID="attrPlaceHolder" runat="server"></asp:PlaceHolder>
+    </p>
 </asp:Content>
