@@ -223,5 +223,17 @@ namespace VacationReservations.Common
                 context.Response.AddHeader("Location", properUrl);
             }
         }
+
+        public static string ToSearch(string searchString, bool allWords, string page)
+        {
+            if (page == "1")
+                return BuildAbsolute(
+                String.Format("/Search.aspx?Search={0}&AllWords={1}",
+                searchString, allWords.ToString()));
+            else
+                return BuildAbsolute(
+                String.Format("/Search.aspx?Search={0}&AllWords={1}&Page={2}",
+                searchString, allWords.ToString(), page));
+        }
     }
 }

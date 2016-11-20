@@ -134,3 +134,20 @@ a.CategorySelected {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+.SearchBox {
+    border-collapse: collapse;
+    margin-top: 20px;
+    width: 200px;
+}
+
+.SearchBoxHead {
+    border: #0468a4 1px solid;
+    background-color: #FFFF99;
+    text-align: center;
+}
+
+.SearchBoxContent {
+    border: #0468a4 1px solid;
+    padding: 5px 0px 5px 12px;
+}

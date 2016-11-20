@@ -4,6 +4,9 @@
 <%@ Register src="UserControls/CategoriesList.ascx" tagprefix="uc1" tagname="CategoriesList" %>
 
 
+<%@ Register src="UserControls/SearchBox.ascx" tagname="SearchBox" tagprefix="uc2" %>
+
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -18,6 +21,7 @@
             <div class="Main">
                 <div class="Left">
                     <div class="Container">
+                        <uc2:SearchBox ID="SearchBox1" runat="server" />
                         <uc1:DepartmentUserControl ID="DepartmentUserControl1" runat="server" />
                         <uc1:CategoriesList runat="server" id="CategoriesList" />
                     </div>

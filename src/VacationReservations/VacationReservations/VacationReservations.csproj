@@ -108,6 +108,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Product.aspx" />
+    <Content Include="Search.aspx" />
     <Content Include="Sql\CatalogGetCategoryDetails.sql" />
     <Content Include="Sql\CatalogGetDepartmentDetails.sql" />
     <Content Include="Sql\CatalogGetProductAttributeValues.sql" />
@@ -119,6 +120,7 @@
     <Content Include="UserControls\DepartmentUserControl.ascx" />
     <Content Include="UserControls\Pager.ascx" />
     <Content Include="UserControls\ProductsList.ascx" />
+    <Content Include="UserControls\SearchBox.ascx" />
     <Content Include="VacationReservationsPage.Master" />
     <Content Include="Sql\CatalogGetProductDetails.sql" />
     <None Include="Web.Debug.config">
@@ -185,6 +187,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="Sql\CatalogGetCategoriesInDepartment.sql" />
     <Content Include="Sql\SearchCatalog.sql" />
+    <Compile Include="Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\CategoriesList.ascx.cs">
       <DependentUpon>CategoriesList.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -212,6 +221,13 @@
     </Compile>
     <Compile Include="UserControls\ProductsList.ascx.designer.cs">
       <DependentUpon>ProductsList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SearchBox.ascx.cs">
+      <DependentUpon>SearchBox.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\SearchBox.ascx.designer.cs">
+      <DependentUpon>SearchBox.ascx</DependentUpon>
     </Compile>
     <Compile Include="VacationReservationsPage.Master.cs">
       <DependentUpon>VacationReservationsPage.Master</DependentUpon>

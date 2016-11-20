@@ -16,7 +16,7 @@ namespace VacationReservations.UserControls
         {
             PopulateControls();
         }
-
+            
         private void PopulateControls()
         {
             // Retrieve DepartmentID from the query string
@@ -26,14 +26,29 @@ namespace VacationReservations.UserControls
             // Retrieve Page from the query string
             string page = Request.QueryString["Page"];
             if (page == null) page = "1";
+            // Retrieve Search string from query string
+            string searchString = Request.QueryString["Search"];
             // How many pages of products?
             int howManyPages = 1;
             // pager links format
             string firstPageUrl = "";
             string pagerFormat = "";
-            // If browsing a category...
-            if (categoryId != null)
+            // If performing a product search
+            if (searchString != null)
             {
+                // Retrieve AllWords from query string
+                string allWords = Request.QueryString["AllWords"];
+                // Perform search
+                list.DataSource = CatalogAccess.Search(searchString, allWords,
+               page, out howManyPages);
+                list.DataBind();
+                // Display pager
+                firstPageUrl = Link.ToSearch(searchString, allWords.ToUpper() == "TRUE", "1");
+                pagerFormat = Link.ToSearch(searchString, allWords.ToUpper() == "TRUE", "{0}");
+            }
+            // If browsing a category...
+            else if (categoryId != null)
+            { 
                 // Retrieve list of products in a category
                 list.DataSource =
                 CatalogAccess.GetProductsInCategory(categoryId, page, out howManyPages);

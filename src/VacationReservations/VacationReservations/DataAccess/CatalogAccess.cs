@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Web;
 using VacationReservations.Common;
 
@@ -284,6 +285,75 @@ namespace VacationReservations.DataAccess
             comm.Parameters.Add(param);
             // execute the stored procedure and return the results
             return GenericDataAccess.ExecuteSelectCommand(comm);
+        }
+
+        public static DataTable Search(string searchString, string allWords,
+    string pageNumber, out int howManyPages)
+        {
+            // get a configured DbCommand object
+            DbCommand comm = GenericDataAccess.CreateCommand();
+            // set the stored procedure name
+            comm.CommandText = "SearchCatalog";
+            // create a new parameter
+            DbParameter param = comm.CreateParameter();
+            param.ParameterName = "@DescriptionLength";
+            param.Value = VacationReservationsConfiguration.ProductDescriptionLength;
+            param.DbType = DbType.Int32;
+            comm.Parameters.Add(param);
+            // create a new parameter
+            param = comm.CreateParameter();
+            param.ParameterName = "@AllWords";
+            param.Value = allWords.ToUpper() == "TRUE" ? "1" : "0";
+            param.DbType = DbType.Byte;
+            comm.Parameters.Add(param);
+            // create a new parameter
+            param = comm.CreateParameter();
+            param.ParameterName = "@PageNumber";
+            param.Value = pageNumber;
+            param.DbType = DbType.Int32;
+            comm.Parameters.Add(param);
+            // create a new parameter
+            param = comm.CreateParameter();
+            param.ParameterName = "@ProductsPerPage";
+            param.Value = VacationReservationsConfiguration.ProductsPerPage;
+            param.DbType = DbType.Int32;
+            comm.Parameters.Add(param);
+            // create a new parameter
+            param = comm.CreateParameter();
+            param.ParameterName = "@HowManyResults";
+            param.Direction = ParameterDirection.Output;
+            param.DbType = DbType.Int32;
+            comm.Parameters.Add(param);
+
+            // define the maximum number of words
+            int howManyWords = 5;
+            // transform search string into array of words
+            string[] words = Regex.Split(searchString, "[^a-zA-Zа-яА-Я0-9]+");
+
+            // add the words as stored procedure parameters
+            int index = 1;
+            for (int i = 0; i <= words.GetUpperBound(0) && index <= howManyWords; i++)
+                // ignore short words
+                if (words[i].Length > 2)
+                {
+                    // create the @Word parameters
+                    param = comm.CreateParameter();
+                    param.ParameterName = "@Word" + index.ToString();
+                    param.Value = words[i];
+                    param.DbType = DbType.String;
+                    comm.Parameters.Add(param);
+                    index++;
+                }
+
+            // execute the stored procedure and save the results in a DataTable
+            DataTable table = GenericDataAccess.ExecuteSelectCommand(comm);
+            // calculate how many pages of products and set the out parameter
+            int howManyProducts =
+          Int32.Parse(comm.Parameters["@HowManyResults"].Value.ToString());
+            howManyPages = (int)Math.Ceiling((double)howManyProducts /
+                           (double)VacationReservationsConfiguration.ProductsPerPage);
+            // return the page of products
+            return table;
         }
     }
 }
