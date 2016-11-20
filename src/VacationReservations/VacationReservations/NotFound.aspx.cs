@@ -7,12 +7,12 @@ using System.Web.UI.WebControls;
 
 namespace VacationReservations
 {
-    public partial class Oops : System.Web.UI.Page
+    public partial class NotFound : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            // set the 500 status code
-            Response.Status = "500 Internal Server Error";
+            // set the 404 status code
+            Response.StatusCode = 404;
         }
     }
 }

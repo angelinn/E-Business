@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
 using System.Linq;
+using System.Net;
 using System.Text.RegularExpressions;
 using System.Web;
 using VacationReservations.DataAccess;
@@ -197,12 +198,30 @@ namespace VacationReservations.Common
         {
             // remove all characters that aren't a-z, 0-9, dash, underscore or space
             urlText = purifyUrlRegex.Replace(urlText, "");
+            urlText = CyrilicMapper.Map(urlText);
             // remove all leading and trailing spaces
             urlText = urlText.Trim();
             // change all dashes, underscores and spaces to dashes
             urlText = dashesRegex.Replace(urlText, "-");
             // return the modified string
             return urlText;
+        }
+
+        public static void CheckProductUrl(string productId)
+        {
+            // get requested URL
+            HttpContext context = HttpContext.Current;
+            string requestedUrl = context.Request.RawUrl;
+            // get last part of proper URL
+            string properUrl = Link.ToProduct(productId);
+            string properUrlTrunc = properUrl.Substring(Math.Abs(properUrl.Length - requestedUrl.Length));
+
+            // 301 redirect to the proper URL if necessary
+            if (requestedUrl != properUrlTrunc)
+            {
+                context.Response.Status = "301 Moved Permanently";
+                context.Response.AddHeader("Location", properUrl);
+            }
         }
     }
 }

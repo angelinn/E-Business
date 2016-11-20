@@ -23,6 +23,12 @@ namespace VacationReservations
             {
                 PopulateControls(pd);
             }
+            else
+            {
+                Server.Transfer("~/NotFound.aspx");
+            }
+
+            Link.CheckProductUrl(Request.QueryString["ProductID"]);
         }
 
         // Fill the control with data
