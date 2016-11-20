@@ -114,6 +114,7 @@
     <Content Include="Sql\CatalogGetProductsInGategory.sql" />
     <Content Include="Sql\CatalogGetProductsOnDeptPromo.sql" />
     <Content Include="Sql\CatalogGetProductsOnFrontPromo.sql" />
+    <Content Include="Sql\SearchWord.sql" />
     <Content Include="UserControls\CategoriesList.ascx" />
     <Content Include="UserControls\DepartmentUserControl.ascx" />
     <Content Include="UserControls\Pager.ascx" />
@@ -183,6 +184,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="Sql\CatalogGetCategoriesInDepartment.sql" />
+    <Content Include="Sql\SearchCatalog.sql" />
     <Compile Include="UserControls\CategoriesList.ascx.cs">
       <DependentUpon>CategoriesList.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
