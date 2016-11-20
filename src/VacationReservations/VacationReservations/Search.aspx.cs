@@ -13,13 +13,16 @@ namespace VacationReservations
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            // fill the table contents
-            string searchString = Request.QueryString["Search"];
-            lblFirst.Text = "Product Search";
-            lblSecond.Text = "You searched for \"" + searchString + "\"";
-            // set the title of the page
-            this.Title = VacationReservationsConfiguration.SiteName +
-            " : Product Search : " + searchString;
+            if (!IsPostBack)
+            {
+                // fill the table contents
+                string searchString = Request.QueryString["Search"];
+                lblFirst.Text = "Product Search";
+                lblSecond.Text = "You searched for \"" + searchString + "\"";
+                // set the title of the page
+                this.Title = VacationReservationsConfiguration.SiteName +
+                " : Product Search : " + searchString;
+            }
         }
     }
 }

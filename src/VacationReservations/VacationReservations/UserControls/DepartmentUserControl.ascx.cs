@@ -13,8 +13,14 @@ namespace VacationReservations.UserControls
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            dlDepartments.DataSource = CatalogAccess.GetDepartments();
-            dlDepartments.DataBind();
+            if (!IsPostBack)
+            {
+                // CatalogAccess.GetDepartments returns a DataTable object containing
+                // department data, which is read in the ItemTemplate of the DataList
+                dlDepartments.DataSource = CatalogAccess.GetDepartments();
+                // Needed to bind the data bound controls to the data source
+                dlDepartments.DataBind();
+            }
         }
     }
 }

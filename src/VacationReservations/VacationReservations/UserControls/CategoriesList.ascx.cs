@@ -12,14 +12,17 @@ namespace VacationReservations.UserControls
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string departmentId = Request.QueryString["DepartmentID"];
-            if (departmentId != null)
+            if (!IsPostBack)
             {
-                // Catalog.GetCategoriesInDepartment returns a DataTable
-                // object containing category data, which is displayed by the DataList
-                dlCategories.DataSource = CatalogAccess.GetCategoriesInDepartment(departmentId);
-                // Needed to bind the data bound controls to the data source
-                dlCategories.DataBind();
+                string departmentId = Request.QueryString["DepartmentID"];
+                if (departmentId != null)
+                {
+                    // Catalog.GetCategoriesInDepartment returns a DataTable
+                    // object containing category data, which is displayed by the DataList
+                    dlCategories.DataSource = CatalogAccess.GetCategoriesInDepartment(departmentId);
+                    // Needed to bind the data bound controls to the data source
+                    dlCategories.DataBind();
+                }
             }
         }
     }
