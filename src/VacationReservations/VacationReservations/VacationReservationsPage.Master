@@ -26,7 +26,7 @@
                     <div class="Header">
                         <asp:HyperLink ID="HeaderLink"
                             ImageUrl="~/Images/sample_tourism.png" runat="server"
-                            NavigateUrl="~/" ToolTip="BalloonShop Logo" />
+                            NavigateUrl="~/" ToolTip="Vacation Reservations Logo" />
                     </div>
                     <div class="Contents">
                          <asp:ContentPlaceHolder ID="ContentPlaceHolder1"

@@ -102,6 +102,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Product.aspx" />
     <Content Include="Sql\CatalogGetCategoryDetails.sql" />
     <Content Include="Sql\CatalogGetDepartmentDetails.sql" />
     <Content Include="Sql\CatalogGetProductsInGategory.sql" />
@@ -156,6 +157,13 @@
     </Compile>
     <Compile Include="Oops.aspx.designer.cs">
       <DependentUpon>Oops.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Product.aspx.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product.aspx.designer.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="Sql\CatalogGetCategoriesInDepartment.sql" />
