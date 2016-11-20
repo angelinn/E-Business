@@ -106,13 +106,26 @@ a.CategorySelected {
 }
 
 .CatalogTitle {
- color: red;
- font-size: 24px;
- font-weight: bold;
+    color: red;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .CatalogDescription {
- color: Black;
- font-weight: bold;
- font-size: 14px;
+    color: Black;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.ProductList img {
+    border: 2px solid #c6e1ec;
+    float: left;
+    margin-right: 5px;
+    vertical-align: top;
+}
+
+.ProductTitle {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 10px 1px 0 0;
 }

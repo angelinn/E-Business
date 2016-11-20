@@ -7,36 +7,36 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace VacationReservations {
+namespace VacationReservations.UserControls {
     
     
-    public partial class Catalog {
+    public partial class ProductsList {
         
         /// <summary>
-        /// catalogTitleLabel control.
+        /// pgTop control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label catalogTitleLabel;
+        protected global::VacationReservations.UserControls.Pager pgTop;
         
         /// <summary>
-        /// catalogDescriptionLabel control.
+        /// list control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label catalogDescriptionLabel;
+        protected global::System.Web.UI.WebControls.DataList list;
         
         /// <summary>
-        /// ProductsList1 control.
+        /// pgBottom control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::VacationReservations.UserControls.ProductsList ProductsList1;
+        protected global::VacationReservations.UserControls.Pager pgBottom;
     }
 }

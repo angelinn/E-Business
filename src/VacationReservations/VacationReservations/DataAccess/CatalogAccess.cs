@@ -131,5 +131,143 @@ namespace VacationReservations.DataAccess
             // return department details
             return details;
         }
+
+        public static DataTable GetProductsOnFrontPromo(string pageNumber, out int howManyPages)
+        {
+            // get a configured DbCommand object
+            DbCommand comm = GenericDataAccess.CreateCommand();
+            // set the stored procedure name
+            comm.CommandText = "CatalogGetProductsOnFrontPromo";
+            // create a new parameter
+            DbParameter param = comm.CreateParameter();
+            param.ParameterName = "@DescriptionLength";
+            param.Value = VacationReservationsConfiguration.ProductDescriptionLength;
+            param.DbType = DbType.Int32;
+            comm.Parameters.Add(param);
+            // create a new parameter
+            param = comm.CreateParameter();
+            param.ParameterName = "@PageNumber";
+            param.Value = pageNumber;
+            param.DbType = DbType.Int32;
+            comm.Parameters.Add(param);
+            // create a new parameter
+            param = comm.CreateParameter();
+            param.ParameterName = "@ProductsPerPage";
+            param.Value = VacationReservationsConfiguration.ProductsPerPage;
+            param.DbType = DbType.Int32;
+            comm.Parameters.Add(param);
+            // create a new parameter
+            param = comm.CreateParameter();
+            param.ParameterName = "@HowManyProducts";
+            param.Direction = ParameterDirection.Output;
+            param.DbType = DbType.Int32;
+            comm.Parameters.Add(param);
+
+            // execute the stored procedure and save the results in a DataTable
+            DataTable table = GenericDataAccess.ExecuteSelectCommand(comm);
+            // calculate how many pages of products and set the out parameter
+            int howManyProducts = Int32.Parse(comm.Parameters
+          ["@HowManyProducts"].Value.ToString());
+            howManyPages = (int)Math.Ceiling((double)howManyProducts / (double)VacationReservationsConfiguration.ProductsPerPage);
+            // return the page of products
+            return table;
+        }
+
+        // retrieve the list of products featured for a department
+        public static DataTable GetProductsOnDeptPromo
+        (string departmentId, string pageNumber, out int howManyPages)
+        {
+            // get a configured DbCommand object
+            DbCommand comm = GenericDataAccess.CreateCommand();
+            // set the stored procedure name
+            comm.CommandText = "CatalogGetProductsOnDeptPromo";
+            // create a new parameter
+            DbParameter param = comm.CreateParameter();
+            param.ParameterName = "@DepartmentID";
+            param.Value = departmentId;
+            param.DbType = DbType.Int32;
+            comm.Parameters.Add(param);
+            // create a new parameter
+            param = comm.CreateParameter();
+            param.ParameterName = "@DescriptionLength";
+            param.Value = VacationReservationsConfiguration.ProductDescriptionLength;
+            param.DbType = DbType.Int32;
+            comm.Parameters.Add(param);
+            // create a new parameter
+            param = comm.CreateParameter();
+            param.ParameterName = "@PageNumber";
+            param.Value = pageNumber;
+            param.DbType = DbType.Int32;
+            comm.Parameters.Add(param);
+            // create a new parameter
+            param = comm.CreateParameter();
+            param.ParameterName = "@ProductsPerPage";
+            param.Value = VacationReservationsConfiguration.ProductsPerPage;
+            param.DbType = DbType.Int32;
+            comm.Parameters.Add(param);
+            // create a new parameter
+            param = comm.CreateParameter();
+            param.ParameterName = "@HowManyProducts";
+            param.Direction = ParameterDirection.Output;
+            param.DbType = DbType.Int32;
+            comm.Parameters.Add(param);
+            // execute the stored procedure and save the results in a DataTable
+            DataTable table = GenericDataAccess.ExecuteSelectCommand(comm);
+            // calculate how many pages of products and set the out parameter
+            int howManyProducts = Int32.Parse(comm.Parameters["@HowManyProducts"].Value.ToString());
+            howManyPages = (int)Math.Ceiling((double)howManyProducts /
+                           (double)VacationReservationsConfiguration.ProductsPerPage);
+            // return the page of products
+            return table;
+        }
+
+        // retrieve the list of products in a category
+        public static DataTable GetProductsInCategory
+        (string categoryId, string pageNumber, out int howManyPages)
+        {
+            // get a configured DbCommand object
+            DbCommand comm = GenericDataAccess.CreateCommand();
+            // set the stored procedure name
+            comm.CommandText = "CatalogGetProductsInCategory";
+            // create a new parameter
+            DbParameter param = comm.CreateParameter();
+            param.ParameterName = "@CategoryID";
+            param.Value = categoryId;
+            param.DbType = DbType.Int32;
+            comm.Parameters.Add(param);
+            // create a new parameter
+            param = comm.CreateParameter();
+            param.ParameterName = "@DescriptionLength";
+            param.Value = VacationReservationsConfiguration.ProductDescriptionLength;
+            param.DbType = DbType.Int32;
+            comm.Parameters.Add(param);
+            // create a new parameter
+            param = comm.CreateParameter();
+            param.ParameterName = "@PageNumber";
+
+            param.Value = pageNumber;
+            param.DbType = DbType.Int32;
+            comm.Parameters.Add(param);
+            // create a new parameter
+            param = comm.CreateParameter();
+            param.ParameterName = "@ProductsPerPage";
+            param.Value = VacationReservationsConfiguration.ProductsPerPage;
+            param.DbType = DbType.Int32;
+            comm.Parameters.Add(param);
+            // create a new parameter
+            param = comm.CreateParameter();
+            param.ParameterName = "@HowManyProducts";
+            param.Direction = ParameterDirection.Output;
+            param.DbType = DbType.Int32;
+            comm.Parameters.Add(param);
+            // execute the stored procedure and save the results in a DataTable
+            DataTable table = GenericDataAccess.ExecuteSelectCommand(comm);
+            // calculate how many pages of products and set the out parameter
+            int howManyProducts = Int32.Parse(comm.Parameters["@HowManyProducts"].Value.ToString());
+            howManyPages = (int)Math.Ceiling((double)howManyProducts /
+                           (double)VacationReservationsConfiguration.ProductsPerPage);
+            // return the page of products
+            return table;
+        }
     }
 }

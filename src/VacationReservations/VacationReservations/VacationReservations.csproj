@@ -110,6 +110,8 @@
     <Content Include="Sql\CatalogGetProductsOnFrontPromo.sql" />
     <Content Include="UserControls\CategoriesList.ascx" />
     <Content Include="UserControls\DepartmentUserControl.ascx" />
+    <Content Include="UserControls\Pager.ascx" />
+    <Content Include="UserControls\ProductsList.ascx" />
     <Content Include="VacationReservationsPage.Master" />
     <Content Include="Sql\CatalogGetProductDetails.sql" />
     <None Include="Web.Debug.config">
@@ -180,6 +182,20 @@
     </Compile>
     <Compile Include="UserControls\DepartmentUserControl.ascx.designer.cs">
       <DependentUpon>DepartmentUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Pager.ascx.cs">
+      <DependentUpon>Pager.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Pager.ascx.designer.cs">
+      <DependentUpon>Pager.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ProductsList.ascx.cs">
+      <DependentUpon>ProductsList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ProductsList.ascx.designer.cs">
+      <DependentUpon>ProductsList.ascx</DependentUpon>
     </Compile>
     <Compile Include="VacationReservationsPage.Master.cs">
       <DependentUpon>VacationReservationsPage.Master</DependentUpon>
