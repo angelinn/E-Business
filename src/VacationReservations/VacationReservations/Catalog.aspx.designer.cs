@@ -11,5 +11,23 @@ namespace VacationReservations {
     
     
     public partial class Catalog {
+        
+        /// <summary>
+        /// catalogTitleLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label catalogTitleLabel;
+        
+        /// <summary>
+        /// catalogDescriptionLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label catalogDescriptionLabel;
     }
 }

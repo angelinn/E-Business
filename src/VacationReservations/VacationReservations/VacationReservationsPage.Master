@@ -25,11 +25,10 @@
                 <div class="Right">
                     <div class="Header">
                         <asp:HyperLink ID="HeaderLink"
-                            ImageUrl="~/Images/sample_tourism.jpg" runat="server"
+                            ImageUrl="~/Images/sample_tourism.png" runat="server"
                             NavigateUrl="~/" ToolTip="BalloonShop Logo" />
                     </div>
                     <div class="Contents">
-                        Place contents here
                          <asp:ContentPlaceHolder ID="ContentPlaceHolder1"
                              runat="server">
                          </asp:ContentPlaceHolder>

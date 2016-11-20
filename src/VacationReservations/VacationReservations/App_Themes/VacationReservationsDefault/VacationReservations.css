@@ -104,3 +104,15 @@ a.CategorySelected {
     text-decoration: none;
     color: Black;
 }
+
+.CatalogTitle {
+ color: red;
+ font-size: 24px;
+ font-weight: bold;
+}
+
+.CatalogDescription {
+ color: Black;
+ font-weight: bold;
+ font-size: 14px;
+}

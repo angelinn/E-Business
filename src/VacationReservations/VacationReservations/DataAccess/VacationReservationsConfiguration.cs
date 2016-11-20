@@ -19,7 +19,7 @@ namespace VacationReservations.DataAccess
         {
             dbConnectionString = ConfigurationManager.ConnectionStrings["VacationReservationsConnection"].ConnectionString;
             dbProviderName = ConfigurationManager.ConnectionStrings["VacationReservationsConnection"].ProviderName;
-            Int32.Parse(ConfigurationManager.AppSettings["ProductsPerPage"]);
+            productsPerPage = Int32.Parse(ConfigurationManager.AppSettings["ProductsPerPage"]);
             productDescriptionLength = Int32.Parse(ConfigurationManager.AppSettings["ProductDescriptionLength"]);
             siteName = ConfigurationManager.AppSettings["SiteName"];
         }
