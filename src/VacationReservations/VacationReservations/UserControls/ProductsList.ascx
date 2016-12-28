@@ -4,7 +4,7 @@
 
 <uc1:Pager ID="pgTop" runat="server" />
 <asp:DataList ID="list" runat="server" RepeatColumns="2"
-    CssClass="ProductList" OnItemDataBound="list_ItemDataBound">
+    CssClass="ProductList" OnItemDataBound="list_ItemDataBound" EnableViewState="False">
     <ItemTemplate>
         <h3 class="ProductTitle">
             <a href="<%# Link.ToProduct(Eval("ProductID").ToString()) %>">
