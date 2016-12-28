@@ -15,11 +15,18 @@ namespace ECommerseThumbnailCreator
         {
             PREFIX = $"{Directory.GetCurrentDirectory()}\\t";
         }
+
+        public static void Initialize(int pixels)
+        {
+            width = pixels;
+            height = pixels;
+        }
+
         public static Bitmap ResizeImage(string imageFilePath)
         {
             Image image = Image.FromFile(imageFilePath);
-            var destRect = new Rectangle(0, 0, WIDTH, HEIGHT);
-            var destImage = new Bitmap(WIDTH, HEIGHT);
+            var destRect = new Rectangle(0, 0, width, height);
+            var destImage = new Bitmap(width, height);
 
             destImage.SetResolution(image.HorizontalResolution, image.VerticalResolution);
 
@@ -80,8 +87,8 @@ namespace ECommerseThumbnailCreator
 
         private static readonly string PREFIX;
 
-        private const int WIDTH = 100;
-        private const int HEIGHT = 100;
+        private static int width = 100;
+        private static int height = 100;
         private const int OrientationKey = 0x0112;
         private const int NotSpecified = 0;
         private const int NormalOrientation = 1;
