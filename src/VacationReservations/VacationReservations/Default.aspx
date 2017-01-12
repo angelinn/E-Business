@@ -9,7 +9,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1"
     runat="server">
     <h1>
-        <span class="CatalogTitle">Добре дошли във Ваканционни резервации!</span>
+        <span class="CatalogTitle">Добре дошли в Екскурзии в България!</span>
     </h1>
     <h2>
         <span class="CatalogDescription">Промоциални оферти</span>

@@ -121,6 +121,7 @@
     <Content Include="UserControls\Pager.ascx" />
     <Content Include="UserControls\ProductsList.ascx" />
     <Content Include="UserControls\SearchBox.ascx" />
+    <Content Include="UserControls\UserInfo.ascx" />
     <Content Include="VacationReservationsPage.Master" />
     <Content Include="Sql\CatalogGetProductDetails.sql" />
     <None Include="Web.Debug.config">
@@ -228,6 +229,13 @@
     </Compile>
     <Compile Include="UserControls\SearchBox.ascx.designer.cs">
       <DependentUpon>SearchBox.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserInfo.ascx.cs">
+      <DependentUpon>UserInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserInfo.ascx.designer.cs">
+      <DependentUpon>UserInfo.ascx</DependentUpon>
     </Compile>
     <Compile Include="VacationReservationsPage.Master.cs">
       <DependentUpon>VacationReservationsPage.Master</DependentUpon>

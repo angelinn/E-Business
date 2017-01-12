@@ -3,7 +3,7 @@
 
 <asp:DataList ID="dlCategories" runat="server" Width="200px" CssClass="CategoriesList" HeaderStyle-CssClass="CategoriesListHead">
     <HeaderTemplate>
-        Choose a Category
+        Категории
     </HeaderTemplate>
     <HeaderStyle CssClass="CategoriesListHead" />
     <ItemTemplate>

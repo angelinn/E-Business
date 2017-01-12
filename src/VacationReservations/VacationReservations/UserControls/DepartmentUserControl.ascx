@@ -5,7 +5,7 @@
 
     <HeaderStyle CssClass="DepartmentsListHead"></HeaderStyle>
     <HeaderTemplate>
-        Choose a department
+        Департменти
     </HeaderTemplate>
     <ItemTemplate>
         <asp:HyperLink ID="HyperLink1" runat="server"

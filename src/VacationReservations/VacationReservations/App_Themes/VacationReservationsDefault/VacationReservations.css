@@ -151,3 +151,35 @@ a.CategorySelected {
     border: #0468a4 1px solid;
     padding: 5px 0px 5px 12px;
 }
+
+.UserInfoHead {
+    border: #cc6666 1px solid;
+    background-color: #dc143c;
+    color: #f5f5dc;
+    text-align: center;
+}
+
+.UserInfoContent {
+    border: #cc6666 1px solid;
+    padding: 5px 0px 5px 12px;
+    line-height: 20px;
+}
+
+.AdminTitle {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.Window .Main .Right .AdminHeader {
+    margin: 5px 5px 5px 0px;
+    width: 100%;
+}
+
+.AdminContents {
+    margin: 5px 5px 5px 0px;
+    width: 900px;
+    float: left;
+}
+
+.AdminError {
+    colo;
