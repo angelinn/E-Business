@@ -102,6 +102,7 @@
   <ItemGroup>
     <Content Include="AdminCategories.aspx" />
     <Content Include="AdminDepartments.aspx" />
+    <Content Include="AdminOrderDetails.aspx" />
     <Content Include="AdminOrders.aspx" />
     <Content Include="AdminProductDetails.aspx" />
     <Content Include="AdminProducts.aspx" />
@@ -137,10 +138,16 @@
     <Content Include="Sql\CatalogRemoveProductFromCategory.sql" />
     <Content Include="Sql\CatalogUpdateDepartment.sql" />
     <Content Include="Sql\CatalogUpdateProduct.sql" />
+    <Content Include="Sql\OrderGetDetails.sql" />
+    <Content Include="Sql\OrderGetInfo.sql" />
+    <Content Include="Sql\OrderMarkCanceled.sql" />
+    <Content Include="Sql\OrderMarkCompleted.sql" />
+    <Content Include="Sql\OrderMarkVerified.sql" />
     <Content Include="Sql\OrdersGetByDate.sql" />
     <Content Include="Sql\OrdersGetByRecent.sql" />
     <Content Include="Sql\OrdersGetUnverifiedUncanceled.sql" />
     <Content Include="Sql\OrdersGetVerifiedUncompleted.sql" />
+    <Content Include="Sql\OrderUpdate.sql" />
     <Content Include="Sql\SearchWord.sql" />
     <Content Include="Sql\ShoppingCardAddItem.sql" />
     <Content Include="Sql\ShoppingCartCountOldCarts.sql" />
@@ -198,6 +205,13 @@
     </Compile>
     <Compile Include="AdminDepartments.aspx.designer.cs">
       <DependentUpon>AdminDepartments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminOrderDetails.aspx.cs">
+      <DependentUpon>AdminOrderDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminOrderDetails.aspx.designer.cs">
+      <DependentUpon>AdminOrderDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminOrders.aspx.cs">
       <DependentUpon>AdminOrders.aspx</DependentUpon>
