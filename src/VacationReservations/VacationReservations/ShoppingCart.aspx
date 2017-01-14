@@ -11,30 +11,29 @@
     <p>
         <asp:Label ID="statusLabel" runat="server" />
     </p>
-    <asp:GridView ID="grid" runat="server" OnRowDeleting="grid_RowDeleting" DataKeyNames="ProductID">
+    <asp:GridView ID="grid" runat="server" OnRowDeleting="grid_RowDeleting" DataKeyNames="ProductID" AutoGenerateColumns="False">
         <Columns>
-            <asp:BoundField DataField="Name" HeaderText="Product Name" ReadOnly="True" SortExpression="Name" />
-            <asp:BoundField DataField="Price" HeaderText="Price" ReadOnly="True" SortExpression="Price" />
-            <asp:BoundField DataField="Attributes" HeaderText="Attributes" ReadOnly="True" SortExpression="Attributes" />
-            <asp:TemplateField HeaderText="Quantity">
+            <asp:BoundField DataField="Name" HeaderText="Продукт" ReadOnly="True" SortExpression="Name" />
+            <asp:BoundField DataField="Price" HeaderText="Цена" ReadOnly="True" SortExpression="Price" DataFormatString="{0:c}" />
+            <asp:BoundField DataField="Attributes" HeaderText="Атрибути" ReadOnly="True" SortExpression="Attributes" />
+            <asp:TemplateField HeaderText="Количество">
                 <ItemTemplate>
                     <asp:TextBox ID="editQuantity" runat="server" CssClass="GridEditingRow" Width="24px"
                         MaxLength="2" Text='<%#Eval("Quantity")%>' />
                 </ItemTemplate>
             </asp:TemplateField>
-            <asp:BoundField DataField="Subtotal" HeaderText="Subtotal" ReadOnly="True" SortExpression="Subtotal" />
-            <asp:ButtonField ButtonType="Button" CommandName="Delete" ShowHeader="True" Text="Delete" />
+            <asp:ButtonField ButtonType="Button" CommandName="Delete" ShowHeader="True" Text="Изтрий" />
         </Columns>
     </asp:GridView>
     <p align="right">
-        <span>Total amount: </span>
+        <span>Общо: </span>
         <asp:Label ID="totalAmountLabel" runat="server" Text="Label" />
     </p>
     <p align="right">
-        <asp:Button ID="updateButton" runat="server" Text="Update Quantities"
+        <asp:Button ID="updateButton" runat="server" Text="Обнови количествата"
             OnClick="updateButton_Click" />
         <asp:Button ID="checkoutButton" runat="server"
-            Text="Proceed to Checkout" />
+            Text="Потвърди покупката" />
     </p>
     <uc1:ProductRecommendations ID="recommendations" runat="server" />
 </asp:Content>

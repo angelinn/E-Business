@@ -5,16 +5,16 @@
             <b>
                 <asp:Label ID="cartSummaryLabel" runat="server" /></b>
             <asp:HyperLink ID="viewCartLink" runat="server" NavigateUrl="../ShoppingCart.aspx"
-                CssClass="CartLink" Text="(view details)" />
+                CssClass="CartLink" Text="(виж повече)" />
             <asp:DataList ID="list" runat="server">
                 <ItemTemplate>
-                    <%# Eval("Quantity") %>
- x
- <%# Eval("Name") %>
+                     <%# Eval("Quantity") %>
+                     x
+                     <%# Eval("Name") %>
                 </ItemTemplate>
             </asp:DataList>
             <img src="Images/line.gif" border="0" width="99%" height="1" />
-            Total: <span class="ProductPrice">
+            Общо: <span class="ProductPrice">
                 <asp:Label ID="totalAmountLabel" runat="server" />
             </span>
         </td>

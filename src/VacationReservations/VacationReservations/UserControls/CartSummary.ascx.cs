@@ -28,7 +28,7 @@ namespace VacationReservations.UserControls
             // if the shopping cart is empty...
             if (dt.Rows.Count == 0)
             {
-                cartSummaryLabel.Text = "Your shopping cart is empty.";
+                cartSummaryLabel.Text = "Количката Ви е празна.";
                 totalAmountLabel.Text = String.Format("{0:c}", 0);
                 viewCartLink.Visible = false;
                 list.Visible = false;
@@ -41,7 +41,7 @@ namespace VacationReservations.UserControls
                 list.DataSource = dt;
                 list.DataBind();
                 // set up controls
-                cartSummaryLabel.Text = "Cart summary ";
+                cartSummaryLabel.Text = "Количка ";
                 viewCartLink.Visible = true;
                 // display the total amount
                 decimal amount = ShoppingCartAccess.GetTotalAmount();
