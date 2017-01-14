@@ -166,6 +166,7 @@
     <Content Include="UserControls\ProductRecommendations.ascx" />
     <Content Include="UserControls\ProductsList.ascx" />
     <Content Include="UserControls\SearchBox.ascx" />
+    <Content Include="StringEncryptorTester.aspx" />
     <Content Include="UserControls\UserInfo.ascx" />
     <Content Include="VacationReservationsPage.Master" />
     <Content Include="Sql\CatalogGetProductDetails.sql" />
@@ -255,6 +256,7 @@
     <Compile Include="Common\CyrilicMapper.cs" />
     <Compile Include="Common\Link.cs" />
     <Compile Include="Common\PasswordHasher.cs" />
+    <Compile Include="Common\StringEncryptor.cs" />
     <Compile Include="Common\Utilities.cs" />
     <Compile Include="DataAccess\CatalogAccess.cs" />
     <Compile Include="DataAccess\GenericDataAccess.cs" />
@@ -371,6 +373,13 @@
     </Compile>
     <Compile Include="UserControls\SearchBox.ascx.designer.cs">
       <DependentUpon>SearchBox.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="StringEncryptorTester.aspx.cs">
+      <DependentUpon>StringEncryptorTester.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StringEncryptorTester.aspx.designer.cs">
+      <DependentUpon>StringEncryptorTester.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UserInfo.ascx.cs">
       <DependentUpon>UserInfo.ascx</DependentUpon>
