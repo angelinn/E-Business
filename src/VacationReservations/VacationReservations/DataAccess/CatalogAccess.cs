@@ -900,5 +900,28 @@ namespace VacationReservations.DataAccess
             // result will be 1 in case of success
             return (result != -1);
         }
+
+        // gets product recommendations
+        public static DataTable GetRecommendations(string productId)
+        {
+            // get a configured DbCommand object
+            DbCommand comm = GenericDataAccess.CreateCommand();
+            // set the stored procedure name
+            comm.CommandText = "CatalogGetProductRecommendations";
+            // create a new parameter
+            DbParameter param = comm.CreateParameter();
+            param.ParameterName = "@ProductID";
+            param.Value = productId;
+            param.DbType = DbType.Int32;
+            comm.Parameters.Add(param);
+            // create a new parameter
+            param = comm.CreateParameter();
+            param.ParameterName = "@DescriptionLength";
+            param.Value = VacationReservationsConfiguration.ProductDescriptionLength;
+            param.DbType = DbType.Int32;
+            comm.Parameters.Add(param);
+            // execute the stored procedure
+            return GenericDataAccess.ExecuteSelectCommand(comm);
+        }
     }
 }

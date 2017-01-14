@@ -1,5 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/VacationReservationsPage.Master" AutoEventWireup="true" CodeBehind="ShoppingCart.aspx.cs" Inherits="VacationReservations.ShoppingCart" %>
 
+<%@ Register src="UserControls/ProductRecommendations.ascx" tagname="ProductRecommendations" tagprefix="uc1" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -37,4 +39,5 @@
         <asp:Button ID="checkoutButton" runat="server"
             Text="Proceed to Checkout" />
     </p>
+    <uc1:ProductRecommendations ID="recommendations" runat="server" />
 </asp:Content>

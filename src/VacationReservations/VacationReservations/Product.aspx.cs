@@ -43,6 +43,7 @@ namespace VacationReservations
             this.Title = VacationReservationsConfiguration.SiteName + pd.Name;
 
             string productId = pd.ProductID.ToString();
+            recommendations.LoadProductRecommendations(productId);
             // obtain the attributes of the product
             DataTable attrTable = CatalogAccess.GetProductAttributes(productId);
             // temp variables
@@ -71,6 +72,32 @@ namespace VacationReservations
                 // add a new attribute value to the DropDownList
                 attributeValuesDropDown.Items.Add(new ListItem(attributeValue, attributeValueId));
             }
+        }
+
+        protected void AddToCartButton_Click(object sender, EventArgs e)
+        {
+            // Retrieve ProductID from the query string
+            string productId = Request.QueryString["ProductID"];
+
+            // Retrieve the selected product options
+            string options = "";
+            foreach (Control cnt in attrPlaceHolder.Controls)
+            {
+                if (cnt is Label)
+                {
+                    Label attrLabel = (Label)cnt;
+                    options += attrLabel.Text;
+                }
+
+                if (cnt is DropDownList)
+                {
+                    DropDownList attrDropDown = (DropDownList)cnt;
+                    options += attrDropDown.Items[attrDropDown.SelectedIndex] + "; ";
+                }
+            }
+
+            // Add the product to the shopping cart
+            ShoppingCartAccess.AddItem(productId, options);
         }
     }
 }

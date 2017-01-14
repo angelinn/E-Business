@@ -117,6 +117,7 @@
     </Content>
     <Content Include="Product.aspx" />
     <Content Include="Search.aspx" />
+    <Content Include="SecurityLibTester.aspx" />
     <Content Include="ShoppingCart.aspx" />
     <Content Include="Sql\CatalogAddDepartment.sql" />
     <Content Include="Sql\CatalogAssignProductToCategory.sql" />
@@ -126,11 +127,13 @@
     <Content Include="Sql\CatalogDeleteDepartment.sql" />
     <Content Include="Sql\CatalogDeleteProduct.sql" />
     <Content Include="Sql\CatalogGetAllProductsInCategory.sql" />
+    <Content Include="Sql\CatalogGetCartRecommendations.sql" />
     <Content Include="Sql\CatalogGetCategoriesWithoutProduct.sql" />
     <Content Include="Sql\CatalogGetCategoriesWithProduct.sql" />
     <Content Include="Sql\CatalogGetCategoryDetails.sql" />
     <Content Include="Sql\CatalogGetDepartmentDetails.sql" />
     <Content Include="Sql\CatalogGetProductAttributeValues.sql" />
+    <Content Include="Sql\CatalogGetProductRecommendations.sql" />
     <Content Include="Sql\CatalogGetProductsInGategory.sql" />
     <Content Include="Sql\CatalogGetProductsOnDeptPromo.sql" />
     <Content Include="Sql\CatalogGetProductsOnFrontPromo.sql" />
@@ -160,6 +163,7 @@
     <Content Include="UserControls\CategoriesList.ascx" />
     <Content Include="UserControls\DepartmentUserControl.ascx" />
     <Content Include="UserControls\Pager.ascx" />
+    <Content Include="UserControls\ProductRecommendations.ascx" />
     <Content Include="UserControls\ProductsList.ascx" />
     <Content Include="UserControls\SearchBox.ascx" />
     <Content Include="UserControls\UserInfo.ascx" />
@@ -250,6 +254,7 @@
     </Compile>
     <Compile Include="Common\CyrilicMapper.cs" />
     <Compile Include="Common\Link.cs" />
+    <Compile Include="Common\PasswordHasher.cs" />
     <Compile Include="Common\Utilities.cs" />
     <Compile Include="DataAccess\CatalogAccess.cs" />
     <Compile Include="DataAccess\GenericDataAccess.cs" />
@@ -304,6 +309,13 @@
     <Compile Include="Search.aspx.designer.cs">
       <DependentUpon>Search.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SecurityLibTester.aspx.cs">
+      <DependentUpon>SecurityLibTester.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SecurityLibTester.aspx.designer.cs">
+      <DependentUpon>SecurityLibTester.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ShoppingCart.aspx.cs">
       <DependentUpon>ShoppingCart.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -338,6 +350,13 @@
     </Compile>
     <Compile Include="UserControls\Pager.ascx.designer.cs">
       <DependentUpon>Pager.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ProductRecommendations.ascx.cs">
+      <DependentUpon>ProductRecommendations.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ProductRecommendations.ascx.designer.cs">
+      <DependentUpon>ProductRecommendations.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControls\ProductsList.ascx.cs">
       <DependentUpon>ProductsList.ascx</DependentUpon>

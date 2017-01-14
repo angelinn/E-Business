@@ -22,6 +22,7 @@ namespace VacationReservations
         // fill shopping cart controls with data
         private void PopulateControls()
         {
+            recommendations.LoadCartRecommendations();
             // get the items in the shopping cart
             DataTable dt = ShoppingCartAccess.GetItems();
             // if the shopping cart is empty...
