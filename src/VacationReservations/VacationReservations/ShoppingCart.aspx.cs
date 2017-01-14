@@ -28,7 +28,7 @@ namespace VacationReservations
             // if the shopping cart is empty...
             if (dt.Rows.Count == 0)
             {
-                titleLabel.Text = "Your shopping cart is empty!";
+                titleLabel.Text = "Количката Ви е празна!";
                 grid.Visible = false;
                 updateButton.Enabled = false;
                 checkoutButton.Enabled = false;
@@ -41,7 +41,7 @@ namespace VacationReservations
                 grid.DataSource = dt;
                 grid.DataBind();
                 // setup controls
-                titleLabel.Text = "These are the products in your shopping cart:";
+                titleLabel.Text = "Това са продуктите във Вашата количка:";
                 grid.Visible = true;
                 updateButton.Enabled = true;
                 checkoutButton.Enabled = true;
@@ -61,8 +61,8 @@ namespace VacationReservations
             // Remove the product from the shopping cart
             bool success = ShoppingCartAccess.RemoveItem(productId);
             // Display status
-            statusLabel.Text = success ? "Product successfully removed!" :
-            "There was an error removing the product! ";
+            statusLabel.Text = success ? "Продуктът премахнат успешно!" :
+            "Имаше проблем при премахването на продукта! ";
             // Repopulate the control
             PopulateControls();
         }
@@ -103,8 +103,8 @@ namespace VacationReservations
                 }
                 // Display status message
                 statusLabel.Text = success ?
-                "Your shopping cart was successfully updated!" :
-                "Some quantity updates failed! Please verify your cart!";
+                "Количката Ви беше успешно обновена!" :
+                "Неуспешно обновяване! Моля проверете количката си!";
             }
             // Repopulate the control
             PopulateControls();
@@ -117,7 +117,7 @@ namespace VacationReservations
             decimal amount = ShoppingCartAccess.GetTotalAmount();
             // Create the order and store the order ID
             string orderId = ShoppingCartAccess.CreateOrder();
-            string ordername = VacationReservationsConfiguration.SiteName + " Order " + orderId;
+            string ordername = VacationReservationsConfiguration.SiteName + " Поръчка " + orderId;
             // Go to PayPal checkout
             string destination = Link.ToPayPalCheckout(ordername, amount);
             Response.Redirect(destination);

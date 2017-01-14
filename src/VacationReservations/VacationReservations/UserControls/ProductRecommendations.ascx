@@ -4,7 +4,7 @@
 <asp:DataList ID="list" runat="server" ShowHeader="false">
     <HeaderStyle CssClass=" RecommendationsHead " />
     <HeaderTemplate>
-        We also recommend:
+        Също препоръчваме:
     </HeaderTemplate>
     <ItemTemplate>
         <a class="RecommendationLabel" href='<%# Link.ToProduct(Eval("ProductID").ToString())%>'>

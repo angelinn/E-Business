@@ -9,49 +9,49 @@
     <EditItemTemplate>
         <table class="UserDetailsTable">
             <tr>
-                <td>Address line 1: </td>
+                <td>Адрес: </td>
                 <td width="350px">
                     <asp:TextBox Width="340px" ID="Address1TextBox" runat="server"
                         Text='<%# Bind("Address1") %>' />
                 </td>
             </tr>
             <tr>
-                <td>Address line 2: </td>
+                <td>Алтернативен адрес: </td>
                 <td>
                     <asp:TextBox Width="340px" ID="Address2TextBox" runat="server"
                         Text='<%# Bind("Address2") %>' />
                 </td>
             </tr>
             <tr>
-                <td>City: </td>
+                <td>Град: </td>
                 <td>
                     <asp:TextBox Width="340px" ID="CityTextBox" runat="server"
                         Text='<%# Bind("City") %>' />
                 </td>
             </tr>
             <tr>
-                <td>Region: </td>
+                <td>Регион: </td>
                 <td>
                     <asp:TextBox Width="340px" ID="RegionTextBox" runat="server"
                         Text='<%# Bind("Region") %>' />
                 </td>
             </tr>
             <tr>
-                <td>Zip / Postal Code: </td>
+                <td>Пощенски код: </td>
                 <td>
                     <asp:TextBox Width="340px" ID="PostalCodeTextBox"
                         runat="server" Text='<%# Bind("PostalCode") %>' />
                 </td>
             </tr>
             <tr>
-                <td>Country: </td>
+                <td>Държава: </td>
                 <td>
                     <asp:TextBox Width="340px" ID="CountryTextBox" runat="server"
                         Text='<%# Bind("Country") %>' />
                 </td>
             </tr>
             <tr>
-                <td>Shipping Region: </td>
+                <td>Регион за изпращане: </td>
                 <td>
                     <asp:DropDownList Width="350px" ID="DropDownList1"
                         runat="server"
@@ -63,21 +63,21 @@
                 </td>
             </tr>
             <tr>
-                <td>Daytime Phone no: </td>
+                <td>Дневен телефон: </td>
                 <td>
                     <asp:TextBox Width="340px" ID="DayPhoneTextBox" runat="server"
                         Text='<%# Bind("DayPhone") %>' />
                 </td>
             </tr>
             <tr>
-                <td>Evening Phone no: </td>
+                <td>Нощен телефон: </td>
                 <td>
                     <asp:TextBox Width="340px" ID="EvePhoneTextBox" runat="server"
                         Text='<%# Bind("EvePhone") %>' />
                 </td>
             </tr>
             <tr>
-                <td>Mobile Phone no: </td>
+                <td>Мобилен телефон: </td>
                 <td>
                     <asp:TextBox Width="340px" ID="MobPhoneTextBox" runat="server"
                         Text='<%# Bind("MobPhone") %>' />
@@ -91,32 +91,32 @@
                 </td>
             </tr>
             <tr>
-                <td valign="top">Credit Card: </td>
+                <td valign="top">Дебитна карта: </td>
                 <td>
                     <table cellpadding="0" cellspacing="0" border="0">
                         <tr>
-                            <td width="140px">Cardholder name: </td>
+                            <td width="140px">Картодържател: </td>
                             <td width="200px">
                                 <asp:TextBox Width="200px" ID="CreditCardHolderLabel"
                                     runat="server" Text='<%# Bind("CreditCardHolder") %>' />
                             </td>
                         </tr>
                         <tr>
-                            <td>Card type: </td>
+                            <td>Тип: </td>
                             <td>
                                 <asp:TextBox Width="200px" ID="CreditCardTypeLabel"
                                     runat="server" Text='<%# Bind("CreditCardType") %>' />
                             </td>
                         </tr>
                         <tr>
-                            <td>Card number: </td>
+                            <td>IBAN: </td>
                             <td>
                                 <asp:TextBox Width="200px" ID="CreditCardNumberLabel"
                                     runat="server" Text='<%# Bind("CreditCardNumber") %>' />
                             </td>
                         </tr>
                         <tr>
-                            <td>Issue date: </td>
+                            <td>Дата на издаване: </td>
                             <td>
                                 <asp:TextBox Width="200px" ID="CreditCardIssueDateLabel"
                                     runat="server"
@@ -124,7 +124,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Expiry date: </td>
+                            <td>Дата на изтичане: </td>
                             <td>
                                 <asp:TextBox Width="200px" ID="CreditCardExpiryDateLabel"
                                     runat="server"
@@ -132,7 +132,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Issue number: </td>
+                            <td>Номер на издаване: </td>
                             <td>
                                 <asp:TextBox Width="200px" ID="CreditCardIssueNumberLabel"
                                     runat="server"
@@ -146,9 +146,9 @@
                 <td>
                     <asp:Button ID="UpdateButton" runat="server"
                         CausesValidation="True" CommandName="Update"
-                        Text="Update" />&nbsp;<asp:Button ID="UpdateCancelButton"
+                        Text="Обнови" />&nbsp;<asp:Button ID="UpdateCancelButton"
                             runat="server" CausesValidation="False" CommandName="Cancel"
-                            Text="Cancel" />
+                            Text="Откажи" />
                 </td>
             </tr>
         </table>
@@ -156,35 +156,35 @@
     <ItemTemplate>
         <table class="UserDetailsTable">
             <tr>
-                <td>Address line 1: </td>
+                <td>Адрес: </td>
                 <td width="350px">
                     <asp:Label ID="Address1Label" runat="server"
                         Text='<%# Bind("Address1") %>' />
                 </td>
             </tr>
             <tr>
-                <td>Address line 2: </td>
+                <td>Алтернативен адрес: </td>
                 <td>
                     <asp:Label ID="Address2Label" runat="server"
                         Text='<%# Bind("Address2") %>' />
                 </td>
             </tr>
             <tr>
-                <td>City: </td>
+                <td>Град: </td>
                 <td>
                     <asp:Label ID="CityLabel" runat="server"
                         Text='<%# Bind("City") %>' />
                 </td>
             </tr>
             <tr>
-                <td>Region: </td>
+                <td>Регион: </td>
                 <td>
                     <asp:Label ID="RegionLabel" runat="server"
                         Text='<%# Bind("Region") %>' />
                 </td>
             </tr>
             <tr>
-                <td>Zip / Postal Code: </td>
+                <td>Пощенски код: </td>
                 <td>
                     <asp:Label ID="PostalCodeLabel" runat="server"
                         Text='<%# Bind("PostalCode") %>'>
@@ -192,14 +192,14 @@
                 </td>
             </tr>
             <tr>
-                <td>Country: </td>
+                <td>Държава: </td>
                 <td>
                     <asp:Label ID="CountryLabel" runat="server"
                         Text='<%# Bind("Country") %>' />
                 </td>
             </tr>
             <tr>
-                <td>Shipping Region: </td>
+                <td>Регион за изпращане: </td>
                 <td>
                     <asp:DropDownList Width="350px" ID="ShippingRegionDropDown"
                         runat="server"
@@ -212,21 +212,21 @@
                 </td>
             </tr>
             <tr>
-                <td>Daytime Phone no: </td>
+                <td>Дневен телефон: </td>
                 <td>
                     <asp:Label ID="DayPhoneLabel" runat="server"
                         Text='<%# Bind("DayPhone") %>' />
                 </td>
             </tr>
             <tr>
-                <td>Evening Phone no: </td>
+                <td>Нощен телефон: </td>
                 <td>
                     <asp:Label ID="EvePhoneLabel" runat="server"
                         Text='<%# Bind("EvePhone") %>' />
                 </td>
             </tr>
             <tr>
-                <td>Mobile Phone no: </td>
+                <td>Мобилен телефон: </td>
                 <td>
                     <asp:Label ID="MobPhoneLabel" runat="server"
                         Text='<%# Bind("MobPhone") %>' />
@@ -240,7 +240,7 @@
                 </td>
             </tr>
             <tr>
-                <td>Credit Card: </td>
+                <td>Дебитна карта: </td>
                 <td>
                     <asp:Label ID="CreditCardLabel" runat="server"
                         Text='<%# Bind("CreditCard") %>' />
@@ -250,7 +250,7 @@
                 <td>
                     <asp:Button ID="EditButton" runat="server"
                         CausesValidation="False" CommandName="Edit"
-                        Text="Edit" />
+                        Text="Редактирай" />
                 </td>
             </tr>
         </table>

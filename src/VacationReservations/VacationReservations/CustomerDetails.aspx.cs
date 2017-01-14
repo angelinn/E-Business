@@ -14,7 +14,7 @@ namespace VacationReservations
         {
             // Set the title of the page
             this.Title = VacationReservationsConfiguration.SiteName +
-            " : Customer Details";
+            " : Профил";
 
         }
     }

@@ -7,21 +7,21 @@
     </span>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="adminPlaceHolder" runat="server">
-    Show the most recent
+    Покажи най-новите
  <asp:TextBox ID="recentCountTextBox" runat="server" MaxLength="4" Width="40px" Text="20" />
-    records
- <asp:Button ID="byRecentGo" runat="server" Text="Go" /><br />
-    Show all records created between
+    записа
+ <asp:Button ID="byRecentGo" runat="server" Text="Напред" /><br />
+    Покажи всички поръчки между
  <asp:TextBox ID="startDateTextBox" runat="server" Width="72px" />
-    and
+    и
  <asp:TextBox ID="endDateTextBox" runat="server" Width="72px" />
-    <asp:Button ID="byDateGo" runat="server" Text="Go" />
+    <asp:Button ID="byDateGo" runat="server" Text="Напред" />
     <br />
-    Show all unverified, uncanceled orders
- <asp:Button ID="unverfiedGo" runat="server" Text="Go" />
+    Покажи всички неверифицирани поръчки
+ <asp:Button ID="unverfiedGo" runat="server" Text="Напред" />
     <br />
-    Show all verified, uncompleted orders
- <asp:Button ID="uncompletedGo" runat="server" Text="Go" />
+    Покажи всички незавършени поръчки
+ <asp:Button ID="uncompletedGo" runat="server" Text="Напред" />
     <br />
       <asp:Label ID="errorLabel" runat="server" CssClass="AdminError" EnableViewState="False"></asp:Label>
   &nbsp;<asp:RangeValidator ID="startDateValidator" runat="server" ControlToValidate="startDateTextBox"

@@ -6,7 +6,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <p>
-        <asp:Label ID="titleLabel" runat="server" Text="Your Shopping Cart" CssClass="CatalogTitle" />
+        <asp:Label ID="titleLabel" runat="server" Text="Вашата количка" CssClass="CatalogTitle" />
     </p>
     <p>
         <asp:Label ID="statusLabel" runat="server" />

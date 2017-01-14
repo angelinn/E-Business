@@ -19,7 +19,7 @@ namespace VacationReservations
         {
             byte days = byte.Parse(daysList.SelectedItem.Value);
             ShoppingCartAccess.DeleteOldCarts(days);
-            countLabel.Text = "The old shopping carts were removed from the database";
+            countLabel.Text = "Старите колички бяха изтрити";
         }
 
         protected void countButton_Click(object sender, EventArgs e)
@@ -27,12 +27,12 @@ namespace VacationReservations
             byte days = byte.Parse(daysList.SelectedItem.Value);
             int oldItems = ShoppingCartAccess.CountOldCarts(days);
             if (oldItems == -1)
-                countLabel.Text = "Could not count the old shopping carts!";
+                countLabel.Text = "Не могат да бъдат преброени!";
             else if (oldItems == 0)
-                countLabel.Text = "There are no old shopping carts.";
+                countLabel.Text = "Няма стари колички.";
             else
-                countLabel.Text = "There are " + oldItems.ToString() +
-                " old shopping carts.";
+                countLabel.Text = "Има " + oldItems.ToString() +
+                " стари колички.";
         }
     }
 }

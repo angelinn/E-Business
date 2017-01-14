@@ -17,7 +17,7 @@
         <asp:Label ID="descriptionLabel" runat="server" Text="Label"></asp:Label>
     </p>
     <p>
-        <b>Price:</b>
+        <b>Цена:</b>
         <asp:Label CssClass="ProductPrice" ID="priceLabel" runat="server"
             Text="Label"></asp:Label>
     </p>

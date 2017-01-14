@@ -17,11 +17,11 @@ namespace VacationReservations
             {
                 // fill the table contents
                 string searchString = Request.QueryString["Search"];
-                lblFirst.Text = "Product Search";
-                lblSecond.Text = "You searched for \"" + searchString + "\"";
+                lblFirst.Text = "Търсене";
+                lblSecond.Text = "Вие потърсихте \"" + searchString + "\"";
                 // set the title of the page
                 this.Title = VacationReservationsConfiguration.SiteName +
-                " : Product Search : " + searchString;
+                " : Търсене : " + searchString;
             }
         }
     }

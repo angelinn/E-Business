@@ -17,7 +17,7 @@ namespace VacationReservations
             // set focus on the username text box when the page loads
             usernameTextBox.Focus();
             // set the page title
-            Title = VacationReservationsConfiguration.SiteName + ": Login";
+            Title = VacationReservationsConfiguration.SiteName + ": Влизане";
         }
     }
 }

@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="titlePlaceHolder" runat="server">
     <span class="AdminTitle">Админ зона
  <br />
-        Категории
+        Категории в
  <asp:HyperLink ID="deptLink" runat="server" />
     </span>
 </asp:Content>
@@ -13,8 +13,8 @@
     </p>
     <asp:GridView ID="grid" runat="server" DataKeyNames="CategoryID" AutoGenerateColumns="False" Width="100%" OnRowEditing="grid_RowEditing" OnRowCancelingEdit="grid_RowCancelingEdit" OnRowUpdating="grid_RowUpdating" OnRowDeleting="grid_RowDeleting">
         <Columns>
-            <asp:BoundField DataField="Name" HeaderText="CategoryName" SortExpression="Name" />
-            <asp:TemplateField HeaderText="Category Description" SortExpression="Description">
+            <asp:BoundField DataField="Name" HeaderText="Категория" SortExpression="Name" />
+            <asp:TemplateField HeaderText="Описание" SortExpression="Description">
                 <ItemTemplate>
                     <asp:Label ID="Label1" runat="server" Text='<%# Bind("Description") %>'>
                     </asp:Label>
@@ -25,12 +25,12 @@
             </asp:TemplateField>
             <asp:TemplateField>
                 <ItemTemplate>
-                    <asp:HyperLink runat="server" ID="link" NavigateUrl='<%# "AdminProducts.aspx?DepartmentID=" + Request.QueryString["DepartmentID"] + "&amp;CategoryID=" + Eval("CategoryID") %>' Text="View Products">
+                    <asp:HyperLink runat="server" ID="link" NavigateUrl='<%# "AdminProducts.aspx?DepartmentID=" + Request.QueryString["DepartmentID"] + "&amp;CategoryID=" + Eval("CategoryID") %>' Text="Виж продуктите">
                     </asp:HyperLink>
                 </ItemTemplate>
             </asp:TemplateField>
-            <asp:CommandField ShowEditButton="True" />
-            <asp:ButtonField CommandName="Delete" Text="Delete" />
+            <asp:CommandField ShowEditButton="True" EditText="Редактирай" />
+            <asp:ButtonField CommandName="Delete" Text="Изтрий" />
         </Columns>
     </asp:GridView>
     <p>Създаване на категория:</p>

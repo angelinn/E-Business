@@ -46,7 +46,7 @@ namespace VacationReservations
             // Set the row for which to enable edit mode
             grid.EditIndex = e.NewEditIndex;
             // Set status message
-            statusLabel.Text = "Editing row # " + e.NewEditIndex.ToString();
+            statusLabel.Text = "Редактиране на # " + e.NewEditIndex.ToString();
             // Reload the grid
             BindGrid();
         }
@@ -57,7 +57,7 @@ namespace VacationReservations
             // Cancel edit mode
             grid.EditIndex = -1;
             // Set status message
-            statusLabel.Text = "Editing canceled";
+            statusLabel.Text = "Спряно";
             // Reload the grid
             BindGrid();
         }
@@ -81,12 +81,12 @@ namespace VacationReservations
                 // Cancel edit mode
                 grid.EditIndex = -1;
                 // Display status message
-                statusLabel.Text = success ? "Product update successful" : "Product update failed";
+                statusLabel.Text = success ? "Продуктът е обновен успешно" : "Неуспешно обновяване";
             }
             catch
             {
                 // Display error
-                statusLabel.Text = "Product update failed";
+                statusLabel.Text = "Неуспешно обновяване";
             }
             // Reload grid
             BindGrid();
@@ -99,7 +99,7 @@ namespace VacationReservations
             // Execute the insert command
             bool success = CatalogAccess.CreateProduct(categoryId, newName.Text, newDescription.Text, newPrice.Text, newThumbnail.Text, newImage.Text, newPromoDept.Checked.ToString(), newPromoFront.Checked.ToString());
             // Display status message
-            statusLabel.Text = success ? "Insert successful" : "Insert failed";
+            statusLabel.Text = success ? "Въвеждането успешно" : "Неуспешно въвеждане";
             // Reload the grid
             BindGrid();
         }

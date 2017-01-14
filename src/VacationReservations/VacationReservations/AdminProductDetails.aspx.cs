@@ -101,12 +101,12 @@ namespace VacationReservations
                 bool success = CatalogAccess.RemoveProductFromCategory(currentProductId, categoryId);
 
                 // Display status message
-                statusLabel.Text = success ? "Product removed successfully" : "Product removal failed";
+                statusLabel.Text = success ? "Продуктът е премахнат успешно" : "Неуспешно премахване";
                 // Refresh the page
                 PopulateControls();
             }
             else
-                statusLabel.Text = "You need to select a category";
+                statusLabel.Text = "Моля изберете категория";
         }
 
         protected void deleteButton_Click(object sender, EventArgs e)
@@ -128,12 +128,12 @@ namespace VacationReservations
                 // Assign the product to the category
                 bool success = CatalogAccess.AssignProductToCategory(currentProductId, categoryId);
                 // Display status message
-                statusLabel.Text = success ? "Product assigned successfully" : "Product assignation failed";
+                statusLabel.Text = success ? "Продуктът добавен успешно" : "Неуспешно добавяне";
                 // Refresh the page
                 PopulateControls();
             }
             else
-                statusLabel.Text = "You need to select a category";
+                statusLabel.Text = "Моля изберете категория";
         }
 
         // move the product to another category
@@ -149,7 +149,7 @@ namespace VacationReservations
                 // If the operation was successful, reload the page,
                 // so the new category will reflect in the query string
                 if (!success)
-                    statusLabel.Text = "Couldn't move the product to the specified category";
+                    statusLabel.Text = "Неуспешно преместване";
             else
  Response.Redirect("AdminProductDetails.aspx" +
  "?DepartmentID=" + currentDepartmentId +
@@ -157,7 +157,7 @@ namespace VacationReservations
  "&ProductID=" + currentProductId);
             }
             else
-                statusLabel.Text = "You need to select a category";
+                statusLabel.Text = "Моля изберете категория";
         }
 
         // upload product's first image
@@ -183,7 +183,7 @@ namespace VacationReservations
                 }
                 catch
                 {
-                    statusLabel.Text = "Uploading image 1 failed";
+                    statusLabel.Text = "Качването неуспешно";
                 }
             }
         }
@@ -211,7 +211,7 @@ namespace VacationReservations
                 }
                 catch
                 {
-                    statusLabel.Text = "Uploading image 2 failed";
+                    statusLabel.Text = "Качването неуспешно";
                 }
             }
         }

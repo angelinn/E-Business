@@ -25,15 +25,15 @@
                     </tr>
                     <tr>
                         <td class="UserInfoContent">
-                            <asp:LoginStatus ID="LoginStatus4" runat="server" />
+                            <asp:LoginStatus ID="LoginStatus4" runat="server" LogoutText="Излез" />
                             <br />
                             <a href="/">Начало</a>
                             <br />
-                            <a href="AdminDepartments.aspx">Catalog Admin</a>
+                            <a href="AdminDepartments.aspx">Каталози</a>
                             <br />
-                            <a href="AdminShoppingCart.aspx">Cart Admin</a>
+                            <a href="AdminShoppingCart.aspx">Количка</a>
                             <br />
-                            <a href="AdminOrders.aspx">Orders Admin</a>
+                            <a href="AdminOrders.aspx">Поръчки</a>
                         </td>
                     </tr>
                 </ContentTemplate>
@@ -47,7 +47,7 @@
                     </tr>
                     <tr>
                         <td class="UserInfoContent">
-                            <asp:LoginStatus ID="LoginStatus4" runat="server" />
+                            <asp:LoginStatus ID="LoginStatus4" runat="server" LogoutText="Излез" />
                             <br />
                             <a href="/">Начало</a>
                             <br />

@@ -23,7 +23,7 @@ namespace VacationReservations
             // load the new data into the grid
             if (int.TryParse(recentCountTextBox.Text, out recordCount))
                 grid.DataSource = OrdersAccess.GetByRecent(recordCount);
-            errorLabel.Text = "Please enter a valid number!";
+            errorLabel.Text = "Моля въведете валиден номер!";
             // refresh the data grid
             grid.DataBind();
         }
@@ -48,7 +48,7 @@ namespace VacationReservations
                 grid.DataSource = OrdersAccess.GetByDate(startDate, endDate);
             }
             else
-                errorLabel.Text = "Please enter valid dates!";
+                errorLabel.Text = "Моля въведете валидни дати!";
             // refresh the data grid
             grid.DataBind();
         }
