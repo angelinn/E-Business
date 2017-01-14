@@ -182,4 +182,5 @@ a.CategorySelected {
 }
 
 .AdminError {
-    colo;
+    color: red;
+}
