@@ -184,3 +184,33 @@ a.CategorySelected {
 .AdminError {
     color: red;
 }
+
+.Grid {
+    border-color: #E7E7FF;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.GridHeader {
+    color: White;
+    background-color: Navy;
+}
+
+.GridRow {
+    color: Navy;
+    background-color: #E7E7FF;
+}
+
+.GridSelectedRow {
+    color: #F7F7F7;
+    background-color: #738A9C;
+}
+
+.GridEditingRow {
+    color: Navy;
+}
+
+.GridAlternateRow {
+    color: Navy;
+    background-color: #F7F7F7;
+}

@@ -130,6 +130,7 @@
     <Content Include="VacationReservationsPage.Master" />
     <Content Include="Sql\CatalogGetProductDetails.sql" />
     <Content Include="Admin.master" />
+    <Content Include="App_Themes\VacationReservationsDefault\VacationReservations.skin" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

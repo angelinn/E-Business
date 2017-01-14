@@ -355,5 +355,111 @@ namespace VacationReservations.DataAccess
             // return the page of products
             return table;
         }
+
+        // Update department details
+        public static bool UpdateDepartment(string id, string name, string description)
+        {
+            // get a configured DbCommand object
+            DbCommand comm = GenericDataAccess.CreateCommand();
+            // set the stored procedure name
+            comm.CommandText = "CatalogUpdateDepartment";
+            // create a new parameter
+            DbParameter param = comm.CreateParameter();
+            param.ParameterName = "@DepartmentId";
+            param.Value = id;
+            param.DbType = DbType.Int32;
+            comm.Parameters.Add(param);
+            // create a new parameter
+            param = comm.CreateParameter();
+            param.ParameterName = "@DepartmentName";
+            param.Value = name;
+            param.DbType = DbType.String;
+            param.Size = 50;
+            comm.Parameters.Add(param);
+            // create a new parameter
+            param = comm.CreateParameter();
+            param.ParameterName = "@DepartmentDescription";
+            param.Value = description;
+            param.DbType = DbType.String;
+            param.Size = 1000;
+            comm.Parameters.Add(param);
+            // result will represent the number of changed rows
+            int result = -1;
+            try
+            {
+                // execute the stored procedure
+                result = GenericDataAccess.ExecuteNonQuery(comm);
+            }
+            catch
+            {
+                // any errors are logged in GenericDataAccess, we ignore them here
+            }
+            // result will be 1 in case of success
+            return (result != -1);
+        }
+
+        // Delete department
+        public static bool DeleteDepartment(string id)
+        {
+            // get a configured DbCommand object
+            DbCommand comm = GenericDataAccess.CreateCommand();
+            // set the stored procedure name
+            comm.CommandText = "CatalogDeleteDepartment";
+            // create a new parameter
+            DbParameter param = comm.CreateParameter();
+            param.ParameterName = "@DepartmentId";
+            param.Value = id;
+            param.DbType = DbType.Int32;
+            comm.Parameters.Add(param);
+            // execute the stored procedure; an error will be thrown by the
+            // database if the department has related categories, in which case
+            // it is not deleted
+            int result = -1;
+            try
+            {
+                result = GenericDataAccess.ExecuteNonQuery(comm);
+            }
+            catch
+            {
+                // any errors are logged in GenericDataAccess, we ignore them here
+            }
+            // result will be 1 in case of success
+            return (result != -1);
+        }
+        // Add a new department
+        public static bool AddDepartment(string name, string description)
+        {
+            // get a configured DbCommand object
+            DbCommand comm = GenericDataAccess.CreateCommand();
+            // set the stored procedure name
+            comm.CommandText = "CatalogAddDepartment";
+            // create a new parameter
+            DbParameter param = comm.CreateParameter();
+            param.ParameterName = "@DepartmentName";
+            param.Value = name;
+            param.DbType = DbType.String;
+            param.Size = 50;
+            comm.Parameters.Add(param);
+            // create a new parameter
+            param = comm.CreateParameter();
+            param.ParameterName = "@DepartmentDescription";
+            param.Value = description;
+            param.DbType = DbType.String;
+            param.Size = 1000;
+            comm.Parameters.Add(param);
+            // result will represent the number of changed rows
+            int result = -1;
+            try
+            {
+                // execute the stored procedure
+                result = GenericDataAccess.ExecuteNonQuery(comm);
+            }
+            catch
+            {
+                // any errors are logged in GenericDataAccess, we ignore them here
+            }
+            // result will be 1 in case of success
+            return (result != -1);
+        }
     }
 }

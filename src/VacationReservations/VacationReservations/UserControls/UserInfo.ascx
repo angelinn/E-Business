@@ -8,7 +8,7 @@
             <tr>
                 <td class="UserInfoContent">Не сте влезли.
  <br />
-                    <asp:LoginStatus ID="LoginStatus1" runat="server" LoginText="Влизане" />
+                    <asp:LoginStatus ID="LoginStatus1" runat="server" LoginText="Влизане" LogoutText="Излизане" />
                     или
                     <asp:HyperLink runat="server" ID="registerLink" NavigateUrl="~/Register.aspx" Text="Регистрация"
                         ToolTip="Go to the registration page" />
@@ -27,9 +27,9 @@
                         <td class="UserInfoContent">
                             <asp:LoginStatus ID="LoginStatus2" runat="server" />
                             <br />
-                            <a href="/">VacationReservations</a>
+                            <a href="/">&lt;-- Обратно/a>
                             <br />
-                            <a href="AdminDepartments.aspx">Catalog Admin</a>
+                            <a href="AdminDepartments.aspx">Админ каталог</a>
                         </td>
                     </tr>
                 </ContentTemplate>
