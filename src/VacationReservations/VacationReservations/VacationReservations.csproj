@@ -102,8 +102,10 @@
   <ItemGroup>
     <Content Include="AdminCategories.aspx" />
     <Content Include="AdminDepartments.aspx" />
+    <Content Include="AdminOrders.aspx" />
     <Content Include="AdminProductDetails.aspx" />
     <Content Include="AdminProducts.aspx" />
+    <Content Include="AdminShoppingCart.aspx" />
     <Content Include="Catalog.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="NotFound.aspx" />
@@ -114,6 +116,7 @@
     </Content>
     <Content Include="Product.aspx" />
     <Content Include="Search.aspx" />
+    <Content Include="ShoppingCart.aspx" />
     <Content Include="Sql\CatalogAddDepartment.sql" />
     <Content Include="Sql\CatalogAssignProductToCategory.sql" />
     <Content Include="Sql\CatalogCreateCategory.sql" />
@@ -134,8 +137,14 @@
     <Content Include="Sql\CatalogRemoveProductFromCategory.sql" />
     <Content Include="Sql\CatalogUpdateDepartment.sql" />
     <Content Include="Sql\CatalogUpdateProduct.sql" />
+    <Content Include="Sql\OrdersGetByDate.sql" />
+    <Content Include="Sql\OrdersGetByRecent.sql" />
+    <Content Include="Sql\OrdersGetUnverifiedUncanceled.sql" />
+    <Content Include="Sql\OrdersGetVerifiedUncompleted.sql" />
     <Content Include="Sql\SearchWord.sql" />
     <Content Include="Sql\ShoppingCardAddItem.sql" />
+    <Content Include="Sql\ShoppingCartCountOldCarts.sql" />
+    <Content Include="Sql\ShoppingCartDeleteOldCarts.sql" />
     <Content Include="Sql\ShoppingCartGetItems.sql" />
     <Content Include="Sql\ShoppingCartGetTotalAmount.sql" />
     <Content Include="Sql\ShoppingCartRemoveItem.sql" />
@@ -190,6 +199,13 @@
     <Compile Include="AdminDepartments.aspx.designer.cs">
       <DependentUpon>AdminDepartments.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdminOrders.aspx.cs">
+      <DependentUpon>AdminOrders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminOrders.aspx.designer.cs">
+      <DependentUpon>AdminOrders.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminProductDetails.aspx.cs">
       <DependentUpon>AdminProductDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -204,6 +220,13 @@
     <Compile Include="AdminProducts.aspx.designer.cs">
       <DependentUpon>AdminProducts.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdminShoppingCart.aspx.cs">
+      <DependentUpon>AdminShoppingCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminShoppingCart.aspx.designer.cs">
+      <DependentUpon>AdminShoppingCart.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Catalog.aspx.cs">
       <DependentUpon>Catalog.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -216,6 +239,7 @@
     <Compile Include="Common\Utilities.cs" />
     <Compile Include="DataAccess\CatalogAccess.cs" />
     <Compile Include="DataAccess\GenericDataAccess.cs" />
+    <Compile Include="DataAccess\OrdersAccess.cs" />
     <Compile Include="DataAccess\ShoppingCartAccess.cs" />
     <Compile Include="DataAccess\VacationReservationsConfiguration.cs" />
     <Compile Include="Default.aspx.cs">
@@ -265,6 +289,13 @@
     </Compile>
     <Compile Include="Search.aspx.designer.cs">
       <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShoppingCart.aspx.cs">
+      <DependentUpon>ShoppingCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShoppingCart.aspx.designer.cs">
+      <DependentUpon>ShoppingCart.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserControls\CartSummary.ascx.cs">
       <DependentUpon>CartSummary.ascx</DependentUpon>

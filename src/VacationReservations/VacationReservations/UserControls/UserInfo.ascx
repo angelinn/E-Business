@@ -25,11 +25,15 @@
                     </tr>
                     <tr>
                         <td class="UserInfoContent">
-                            <asp:LoginStatus ID="LoginStatus2" runat="server" />
+                            <asp:LoginStatus ID="LoginStatus4" runat="server" />
                             <br />
-                            <a href="/">Начало</a>
+                            <a href="/">BalloonShop</a>
                             <br />
-                            <a href="AdminDepartments.aspx">Админ каталог</a>
+                            <a href="AdminDepartments.aspx">Catalog Admin</a>
+                            <br />
+                            <a href="AdminShoppingCart.aspx">Cart Admin</a>
+                            <br />
+                            <a href="AdminOrders.aspx">Orders Admin</a>
                         </td>
                     </tr>
                 </ContentTemplate>

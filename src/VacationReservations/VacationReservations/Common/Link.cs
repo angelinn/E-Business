@@ -235,5 +235,19 @@ namespace VacationReservations.Common
                 String.Format("/Search.aspx?Search={0}&AllWords={1}&Page={2}",
                 searchString, allWords.ToString(), page));
         }
+
+        public static string ToPayPalCheckout(string orderName, decimal orderAmount)
+        {
+            return String.Empty;
+            //return HttpUtility.UrlPathEncode(HttpUtility.UrlPathEncode(
+            //String.Format("{0}/business={1}&item_name={2}&amount={3:0.00}&currency ={4}&return={5}&cancel_return ={6}",
+            //     VacationReservationsConfiguration.PaypalUrl,
+            //     VacationReservationsConfiguration.PaypalEmail,
+            //     orderName,
+            //     orderAmount,
+            //     VacationReservationsConfiguration.PaypalCurrency,
+            //     VacationReservationsConfiguration.PaypalReturnUrl,
+            //     VacationReservationsConfiguration.PaypalCancelUrl));
+        }
     }
 }
