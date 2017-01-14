@@ -27,7 +27,7 @@
                         <td class="UserInfoContent">
                             <asp:LoginStatus ID="LoginStatus2" runat="server" />
                             <br />
-                            <a href="/">&lt;-- Обратно/a>
+                            <a href="/">Начало</a>
                             <br />
                             <a href="AdminDepartments.aspx">Админ каталог</a>
                         </td>

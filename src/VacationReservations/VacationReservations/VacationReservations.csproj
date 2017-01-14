@@ -100,6 +100,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdminCategories.aspx" />
     <Content Include="AdminDepartments.aspx" />
     <Content Include="Catalog.aspx" />
     <Content Include="Login.aspx" />
@@ -112,6 +113,8 @@
     <Content Include="Product.aspx" />
     <Content Include="Search.aspx" />
     <Content Include="Sql\CatalogAddDepartment.sql" />
+    <Content Include="Sql\CatalogCreateCategory.sql" />
+    <Content Include="Sql\CatalogDeleteCategory.sql" />
     <Content Include="Sql\CatalogDeleteDepartment.sql" />
     <Content Include="Sql\CatalogGetCategoryDetails.sql" />
     <Content Include="Sql\CatalogGetDepartmentDetails.sql" />
@@ -131,6 +134,7 @@
     <Content Include="Sql\CatalogGetProductDetails.sql" />
     <Content Include="Admin.master" />
     <Content Include="App_Themes\VacationReservationsDefault\VacationReservations.skin" />
+    <Content Include="Sql\CatalogUpdateCategory.sql" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -154,6 +158,13 @@
     </Compile>
     <Compile Include="Admin.master.designer.cs">
       <DependentUpon>Admin.master</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCategories.aspx.cs">
+      <DependentUpon>AdminCategories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCategories.aspx.designer.cs">
+      <DependentUpon>AdminCategories.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminDepartments.aspx.cs">
       <DependentUpon>AdminDepartments.aspx</DependentUpon>

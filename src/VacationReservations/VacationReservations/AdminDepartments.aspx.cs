@@ -68,7 +68,7 @@ namespace VacationReservations
             // Retrieve updated data
             string id = gvMain.DataKeys[e.RowIndex].Value.ToString();
             string name = ((TextBox)gvMain.Rows[e.RowIndex].Cells[0].Controls[0]).Text;
-            string description = ((TextBox)gvMain.Rows[e.RowIndex].Cells[1].Controls[0]).Text;
+            string description = ((TextBox)gvMain.Rows[e.RowIndex].FindControl("descriptionTextBox")).Text;
             // Execute the update command
             bool success = CatalogAccess.UpdateDepartment(id, name, description);
             // Cancel edit mode
