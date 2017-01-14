@@ -26,7 +26,7 @@
     </p>
     <p>
         <asp:LinkButton ID="AddToCartButton" runat="server"
-            OnClick="AddToCartButton_Click">Add to Shopping Cart</asp:LinkButton>
+            OnClick="AddToCartButton_Click">Добави в количка</asp:LinkButton>
     </p>
     <p>
         <uc1:ProductRecommendations ID="recommendations" runat="server" />

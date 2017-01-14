@@ -50,6 +50,8 @@
                             <asp:LoginStatus ID="LoginStatus4" runat="server" />
                             <br />
                             <a href="/">Начало</a>
+                            <br />
+                            <a href="CustomerDetails.aspx">Профил</a>
                         </td>
                     </tr>
                 </ContentTemplate>
