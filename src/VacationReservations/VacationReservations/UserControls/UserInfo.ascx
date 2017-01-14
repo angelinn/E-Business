@@ -27,13 +27,29 @@
                         <td class="UserInfoContent">
                             <asp:LoginStatus ID="LoginStatus4" runat="server" />
                             <br />
-                            <a href="/">BalloonShop</a>
+                            <a href="/">Начало</a>
                             <br />
                             <a href="AdminDepartments.aspx">Catalog Admin</a>
                             <br />
                             <a href="AdminShoppingCart.aspx">Cart Admin</a>
                             <br />
                             <a href="AdminOrders.aspx">Orders Admin</a>
+                        </td>
+                    </tr>
+                </ContentTemplate>
+            </asp:RoleGroup>
+            <asp:RoleGroup Roles="Customers">
+                <ContentTemplate>
+                                        <tr>
+                        <td class="UserInfoHead">
+                            <asp:LoginName ID="LoginName2" runat="server" FormatString="Здравей, <b>{0}</b>!" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="UserInfoContent">
+                            <asp:LoginStatus ID="LoginStatus4" runat="server" />
+                            <br />
+                            <a href="/">Начало</a>
                         </td>
                     </tr>
                 </ContentTemplate>
