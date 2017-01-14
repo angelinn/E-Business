@@ -11,7 +11,7 @@
     <p>
         <asp:Label ID="statusLabel" runat="server" />
     </p>
-    <asp:GridView ID="grid" runat="server" OnRowDeleting="grid_RowDeleting">
+    <asp:GridView ID="grid" runat="server" OnRowDeleting="grid_RowDeleting" DataKeyNames="ProductID">
         <Columns>
             <asp:BoundField DataField="Name" HeaderText="Product Name" ReadOnly="True" SortExpression="Name" />
             <asp:BoundField DataField="Price" HeaderText="Price" ReadOnly="True" SortExpression="Price" />
@@ -31,10 +31,7 @@
         <asp:Label ID="totalAmountLabel" runat="server" Text="Label" />
     </p>
     <p align="right">
-        <asp:Button ID="updateButton" runat="server" Text="Update Quantities" />
-    </p>
-    <p align="right">
-        <asp:Button ID="Button1" runat="server" Text="Update Quantities"
+        <asp:Button ID="updateButton" runat="server" Text="Update Quantities"
             OnClick="updateButton_Click" />
         <asp:Button ID="checkoutButton" runat="server"
             Text="Proceed to Checkout" />
