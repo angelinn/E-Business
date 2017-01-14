@@ -214,3 +214,9 @@ a.CategorySelected {
     color: Navy;
     background-color: #F7F7F7;
 }
+
+.WideLabel {
+    display: -moz-inline-block;
+    display: inline-block;
+    width: 100px;
+}

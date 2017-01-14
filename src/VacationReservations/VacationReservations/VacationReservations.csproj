@@ -102,6 +102,7 @@
   <ItemGroup>
     <Content Include="AdminCategories.aspx" />
     <Content Include="AdminDepartments.aspx" />
+    <Content Include="AdminProducts.aspx" />
     <Content Include="Catalog.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="NotFound.aspx" />
@@ -113,16 +114,25 @@
     <Content Include="Product.aspx" />
     <Content Include="Search.aspx" />
     <Content Include="Sql\CatalogAddDepartment.sql" />
+    <Content Include="Sql\CatalogAssignProductToCategory.sql" />
     <Content Include="Sql\CatalogCreateCategory.sql" />
+    <Content Include="Sql\CatalogCreateProduct.sql" />
     <Content Include="Sql\CatalogDeleteCategory.sql" />
     <Content Include="Sql\CatalogDeleteDepartment.sql" />
+    <Content Include="Sql\CatalogDeleteProduct.sql" />
+    <Content Include="Sql\CatalogGetAllProductsInCategory.sql" />
+    <Content Include="Sql\CatalogGetCategoriesWithoutProduct.sql" />
+    <Content Include="Sql\CatalogGetCategoriesWithProduct.sql" />
     <Content Include="Sql\CatalogGetCategoryDetails.sql" />
     <Content Include="Sql\CatalogGetDepartmentDetails.sql" />
     <Content Include="Sql\CatalogGetProductAttributeValues.sql" />
     <Content Include="Sql\CatalogGetProductsInGategory.sql" />
     <Content Include="Sql\CatalogGetProductsOnDeptPromo.sql" />
     <Content Include="Sql\CatalogGetProductsOnFrontPromo.sql" />
+    <Content Include="Sql\CatalogMoveProductToCategory.sql" />
+    <Content Include="Sql\CatalogRemoveProductFromCategory.sql" />
     <Content Include="Sql\CatalogUpdateDepartment.sql" />
+    <Content Include="Sql\CatalogUpdateProduct.sql" />
     <Content Include="Sql\SearchWord.sql" />
     <Content Include="UserControls\CategoriesList.ascx" />
     <Content Include="UserControls\DepartmentUserControl.ascx" />
@@ -172,6 +182,13 @@
     </Compile>
     <Compile Include="AdminDepartments.aspx.designer.cs">
       <DependentUpon>AdminDepartments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminProducts.aspx.cs">
+      <DependentUpon>AdminProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminProducts.aspx.designer.cs">
+      <DependentUpon>AdminProducts.aspx</DependentUpon>
     </Compile>
     <Compile Include="Catalog.aspx.cs">
       <DependentUpon>Catalog.aspx</DependentUpon>
