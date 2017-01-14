@@ -102,6 +102,7 @@
   <ItemGroup>
     <Content Include="AdminCategories.aspx" />
     <Content Include="AdminDepartments.aspx" />
+    <Content Include="AdminProductDetails.aspx" />
     <Content Include="AdminProducts.aspx" />
     <Content Include="Catalog.aspx" />
     <Content Include="Login.aspx" />
@@ -182,6 +183,13 @@
     </Compile>
     <Compile Include="AdminDepartments.aspx.designer.cs">
       <DependentUpon>AdminDepartments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminProductDetails.aspx.cs">
+      <DependentUpon>AdminProductDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminProductDetails.aspx.designer.cs">
+      <DependentUpon>AdminProductDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminProducts.aspx.cs">
       <DependentUpon>AdminProducts.aspx</DependentUpon>
