@@ -116,7 +116,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Product.aspx" />
+    <Content Include="Register.aspx" />
     <Content Include="Search.aspx" />
+    <Content Include="SecureCardTester.aspx" />
     <Content Include="SecurityLibTester.aspx" />
     <Content Include="ShoppingCart.aspx" />
     <Content Include="Sql\CatalogAddDepartment.sql" />
@@ -256,6 +258,7 @@
     <Compile Include="Common\CyrilicMapper.cs" />
     <Compile Include="Common\Link.cs" />
     <Compile Include="Common\PasswordHasher.cs" />
+    <Compile Include="Common\SecureCard.cs" />
     <Compile Include="Common\StringEncryptor.cs" />
     <Compile Include="Common\Utilities.cs" />
     <Compile Include="DataAccess\CatalogAccess.cs" />
@@ -304,12 +307,26 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="Sql\CatalogGetCategoriesInDepartment.sql" />
     <Content Include="Sql\SearchCatalog.sql" />
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Search.aspx.cs">
       <DependentUpon>Search.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Search.aspx.designer.cs">
       <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SecureCardTester.aspx.cs">
+      <DependentUpon>SecureCardTester.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SecureCardTester.aspx.designer.cs">
+      <DependentUpon>SecureCardTester.aspx</DependentUpon>
     </Compile>
     <Compile Include="SecurityLibTester.aspx.cs">
       <DependentUpon>SecurityLibTester.aspx</DependentUpon>
