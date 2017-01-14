@@ -236,3 +236,10 @@ a.CategorySelected {
     display: inline-block;
     width: 200px;
 }
+
+.UserDetailsTable {
+    width: 100%;
+    background-color: #ccccff;
+    border: Solid 1px Navy;
+    line-height: 20px;
+}

@@ -108,6 +108,7 @@
     <Content Include="AdminProducts.aspx" />
     <Content Include="AdminShoppingCart.aspx" />
     <Content Include="Catalog.aspx" />
+    <Content Include="CustomerDetails.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="NotFound.aspx" />
     <Content Include="Oops.aspx" />
@@ -163,6 +164,7 @@
     <Content Include="Sql\ShoppingCartUpdateItem.sql" />
     <Content Include="UserControls\CartSummary.ascx" />
     <Content Include="UserControls\CategoriesList.ascx" />
+    <Content Include="UserControls\CustomerDetailsEdit.ascx" />
     <Content Include="UserControls\DepartmentUserControl.ascx" />
     <Content Include="UserControls\Pager.ascx" />
     <Content Include="UserControls\ProductRecommendations.ascx" />
@@ -258,12 +260,21 @@
     <Compile Include="Common\CyrilicMapper.cs" />
     <Compile Include="Common\Link.cs" />
     <Compile Include="Common\PasswordHasher.cs" />
+    <Compile Include="Common\ProfileWrapper.cs" />
     <Compile Include="Common\SecureCard.cs" />
     <Compile Include="Common\StringEncryptor.cs" />
     <Compile Include="Common\Utilities.cs" />
+    <Compile Include="CustomerDetails.aspx.cs">
+      <DependentUpon>CustomerDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerDetails.aspx.designer.cs">
+      <DependentUpon>CustomerDetails.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DataAccess\CatalogAccess.cs" />
     <Compile Include="DataAccess\GenericDataAccess.cs" />
     <Compile Include="DataAccess\OrdersAccess.cs" />
+    <Compile Include="DataAccess\ProfileDataSource.cs" />
     <Compile Include="DataAccess\ShoppingCartAccess.cs" />
     <Compile Include="DataAccess\VacationReservationsConfiguration.cs" />
     <Compile Include="Default.aspx.cs">
@@ -355,6 +366,13 @@
     </Compile>
     <Compile Include="UserControls\CategoriesList.ascx.designer.cs">
       <DependentUpon>CategoriesList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CustomerDetailsEdit.ascx.cs">
+      <DependentUpon>CustomerDetailsEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\CustomerDetailsEdit.ascx.designer.cs">
+      <DependentUpon>CustomerDetailsEdit.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControls\DepartmentUserControl.ascx.cs">
       <DependentUpon>DepartmentUserControl.ascx</DependentUpon>
