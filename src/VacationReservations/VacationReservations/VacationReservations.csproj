@@ -135,6 +135,12 @@
     <Content Include="Sql\CatalogUpdateDepartment.sql" />
     <Content Include="Sql\CatalogUpdateProduct.sql" />
     <Content Include="Sql\SearchWord.sql" />
+    <Content Include="Sql\ShoppingCardAddItem.sql" />
+    <Content Include="Sql\ShoppingCartGetItems.sql" />
+    <Content Include="Sql\ShoppingCartGetTotalAmount.sql" />
+    <Content Include="Sql\ShoppingCartRemoveItem.sql" />
+    <Content Include="Sql\ShoppingCartUpdateItem.sql" />
+    <Content Include="UserControls\CartSummary.ascx" />
     <Content Include="UserControls\CategoriesList.ascx" />
     <Content Include="UserControls\DepartmentUserControl.ascx" />
     <Content Include="UserControls\Pager.ascx" />
@@ -210,6 +216,7 @@
     <Compile Include="Common\Utilities.cs" />
     <Compile Include="DataAccess\CatalogAccess.cs" />
     <Compile Include="DataAccess\GenericDataAccess.cs" />
+    <Compile Include="DataAccess\ShoppingCartAccess.cs" />
     <Compile Include="DataAccess\VacationReservationsConfiguration.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -258,6 +265,13 @@
     </Compile>
     <Compile Include="Search.aspx.designer.cs">
       <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CartSummary.ascx.cs">
+      <DependentUpon>CartSummary.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\CartSummary.ascx.designer.cs">
+      <DependentUpon>CartSummary.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControls\CategoriesList.ascx.cs">
       <DependentUpon>CategoriesList.ascx</DependentUpon>

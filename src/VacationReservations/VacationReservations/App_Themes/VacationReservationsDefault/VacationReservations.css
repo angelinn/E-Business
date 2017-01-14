@@ -220,3 +220,9 @@ a.CategorySelected {
     display: inline-block;
     width: 100px;
 }
+
+.CartSummary {
+    border: #0468a4 2px solid;
+    background-color: snow;
+    padding: 3px 2px 5px;
+}

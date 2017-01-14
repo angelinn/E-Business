@@ -67,6 +67,15 @@ namespace VacationReservations {
         protected global::VacationReservations.UserControls.CategoriesList CategoriesList;
         
         /// <summary>
+        /// CartSummary1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::VacationReservations.UserControls.CartSummary CartSummary1;
+        
+        /// <summary>
         /// HeaderLink control.
         /// </summary>
         /// <remarks>

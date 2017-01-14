@@ -10,6 +10,9 @@
 <%@ Register src="UserControls/UserInfo.ascx" tagname="UserInfo" tagprefix="uc3" %>
 
 
+<%@ Register src="UserControls/CartSummary.ascx" tagname="CartSummary" tagprefix="uc4" %>
+
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -28,6 +31,7 @@
                         <uc2:SearchBox ID="SearchBox1" runat="server" />
                         <uc1:DepartmentUserControl ID="DepartmentUserControl1" runat="server" />
                         <uc1:CategoriesList runat="server" id="CategoriesList" />
+                        <uc4:CartSummary ID="CartSummary1" runat="server" />
                     </div>
                 </div>
                 <div class="Right">
