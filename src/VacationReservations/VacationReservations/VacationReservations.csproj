@@ -126,6 +126,7 @@
     <Content Include="SecurityLibTester.aspx" />
     <Content Include="ShoppingCart.aspx" />
     <Content Include="Sql\CatalogAddDepartment.sql" />
+    <Content Include="Sql\CatalogAddProductReview.sql" />
     <Content Include="Sql\CatalogAssignProductToCategory.sql" />
     <Content Include="Sql\CatalogCreateCategory.sql" />
     <Content Include="Sql\CatalogCreateProduct.sql" />
@@ -140,6 +141,7 @@
     <Content Include="Sql\CatalogGetDepartmentDetails.sql" />
     <Content Include="Sql\CatalogGetProductAttributeValues.sql" />
     <Content Include="Sql\CatalogGetProductRecommendations.sql" />
+    <Content Include="Sql\CatalogGetProductReviews.sql" />
     <Content Include="Sql\CatalogGetProductsInGategory.sql" />
     <Content Include="Sql\CatalogGetProductsOnDeptPromo.sql" />
     <Content Include="Sql\CatalogGetProductsOnFrontPromo.sql" />
@@ -177,6 +179,7 @@
     <Content Include="UserControls\DepartmentUserControl.ascx" />
     <Content Include="UserControls\Pager.ascx" />
     <Content Include="UserControls\ProductRecommendations.ascx" />
+    <Content Include="UserControls\ProductReviews.ascx" />
     <Content Include="UserControls\ProductsList.ascx" />
     <Content Include="UserControls\SearchBox.ascx" />
     <Content Include="StringEncryptorTester.aspx" />
@@ -431,6 +434,13 @@
     </Compile>
     <Compile Include="UserControls\ProductRecommendations.ascx.designer.cs">
       <DependentUpon>ProductRecommendations.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ProductReviews.ascx.cs">
+      <DependentUpon>ProductReviews.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ProductReviews.ascx.designer.cs">
+      <DependentUpon>ProductReviews.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControls\ProductsList.ascx.cs">
       <DependentUpon>ProductsList.ascx</DependentUpon>

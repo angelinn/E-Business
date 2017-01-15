@@ -40,7 +40,7 @@ namespace VacationReservations
             priceLabel.Text = String.Format("{0:c}", pd.Price);
             productImage.ImageUrl = "ProductImages/" + pd.Image;
             // Set the title of the page
-            this.Title = VacationReservationsConfiguration.SiteName + pd.Name;
+            this.Title = VacationReservationsConfiguration.SiteName + " " + pd.Name;
 
             string productId = pd.ProductID.ToString();
             recommendations.LoadProductRecommendations(productId);
