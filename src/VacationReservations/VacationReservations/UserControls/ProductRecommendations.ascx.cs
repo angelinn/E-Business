@@ -38,5 +38,5 @@ namespace VacationReservations.UserControls
                 list.DataBind();
             }
         }
-        }
+    }
 }

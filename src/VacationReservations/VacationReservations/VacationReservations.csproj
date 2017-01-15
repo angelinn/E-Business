@@ -108,6 +108,7 @@
     <Content Include="AdminProducts.aspx" />
     <Content Include="AdminShoppingCart.aspx" />
     <Content Include="Catalog.aspx" />
+    <Content Include="Checkout.aspx" />
     <Content Include="CustomerDetails.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="NotFound.aspx" />
@@ -256,6 +257,13 @@
     </Compile>
     <Compile Include="Catalog.aspx.designer.cs">
       <DependentUpon>Catalog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Checkout.aspx.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Checkout.aspx.designer.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
     </Compile>
     <Compile Include="Common\CyrilicMapper.cs" />
     <Compile Include="Common\Link.cs" />

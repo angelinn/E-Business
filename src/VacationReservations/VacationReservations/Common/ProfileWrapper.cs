@@ -259,7 +259,7 @@ namespace VacationReservations.Common
             }
             catch
             {
-                creditCard = "Not entered.";
+                creditCard = "Няма въведена.";
             }
         }
         public void UpdateProfile()

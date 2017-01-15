@@ -32,7 +32,7 @@
     <p align="right">
         <asp:Button ID="updateButton" runat="server" Text="Обнови количествата"
             OnClick="updateButton_Click" />
-        <asp:Button ID="checkoutButton" runat="server"
+        <asp:Button ID="checkoutButton" runat="server" OnClick="checkoutButton_Click"
             Text="Потвърди покупката" />
     </p>
     <uc1:ProductRecommendations ID="recommendations" runat="server" />
