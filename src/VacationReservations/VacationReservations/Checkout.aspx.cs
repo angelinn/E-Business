@@ -72,16 +72,12 @@ namespace VacationReservations
 
         protected void placeOrderButton_Click(object sender, EventArgs e)
         {
-            // Get the total amount
+            // Store the total amount
             decimal amount = ShoppingCartAccess.GetTotalAmount();
             // Create the order and store the order ID
-            string orderId = ShoppingCartAccess.CreateOrder();
-            string ordername = VacationReservationsConfiguration.SiteName +
-            " Поръчка " + orderId;
-            // Go to PayPal Checkout
-            string destination = Link.ToPayPalCheckout(ordername,
-            amount);
-            Response.Redirect(destination);
+            string orderId = ShoppingCartAccess.CreateCommerceLibOrder();
+            // Redirect to the confirmation page
+            Response.Redirect("OrderPlaced.aspx");
         }
         
     }

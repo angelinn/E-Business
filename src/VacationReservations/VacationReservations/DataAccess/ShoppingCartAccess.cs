@@ -338,5 +338,33 @@ namespace VacationReservations.DataAccess
             // return the result table
             return GenericDataAccess.ExecuteScalar(comm);
         }
+
+        // Create a new order with customer ID
+        public static string CreateCommerceLibOrder()
+        {
+            // get a configured DbCommand object
+            DbCommand comm = GenericDataAccess.CreateCommand();
+            // set the stored procedure name
+            comm.CommandText = "CreateCustomerOrder";
+            // create parameters
+            DbParameter param = comm.CreateParameter();
+            param.ParameterName = "@CartID";
+            param.Value = shoppingCartId;
+            param.DbType = DbType.String;
+            param.Size = 36;
+            comm.Parameters.Add(param);
+            // create a new parameter
+            param = comm.CreateParameter();
+            param.ParameterName = "@CustomerId";
+            param.Value =
+            Membership.GetUser(
+            HttpContext.Current.User.Identity.Name)
+            .ProviderUserKey;
+            param.DbType = DbType.Guid;
+            param.Size = 16;
+            comm.Parameters.Add(param); 
+            // return the result table
+            return GenericDataAccess.ExecuteScalar(comm);
+        }
     }
 }
