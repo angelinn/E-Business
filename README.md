@@ -20,3 +20,16 @@ Add the following key to your web.config
   <add key="ValidationSettings:UnobtrusiveValidationMode" value="None" />
 </appSettings>
 ```
+3. If you created the website with the Web Application Template (like I did), you will miss a class called ProfileCommon. It is usually dynamically created based on the user profile that you have in your database. Example:
+
+```
+// It already has all the properties you have in the database
+ProfileCommon profile = HttpContext.Current.Profile as ProfileCommon;
+profile.SomeCustomProperty = String.Empty;
+```
+
+In you web application you can fix that using the class that ```HttpContext.Current.Profile``` returns ```ProfileBase```
+```
+ProfileBase profile = HttpContext.Current.Profile;
+profile["SomeCustomProperty"] = String.Empty;
+```
