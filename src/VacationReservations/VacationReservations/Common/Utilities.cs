@@ -26,7 +26,14 @@ namespace VacationReservations.Common
             // Create the mail message
             MailMessage mailMessage = new MailMessage(from, to, subject, body);
             // Send mail
-            mailClient.Send(mailMessage);
+            try
+            {
+                mailClient.Send(mailMessage);
+            }
+            catch (SmtpException)
+            {
+
+            }
         }
         // Send error log mail
         public static void LogError(Exception ex)

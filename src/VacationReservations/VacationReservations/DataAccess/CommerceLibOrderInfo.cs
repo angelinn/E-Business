@@ -111,7 +111,7 @@ namespace VacationReservations.DataAccess
             // Add shipping cost
             if (Shipping.ShippingID != -1)
             {
-                sb.AppendLine("Доставка: " + Shipping.ShippingType);
+                sb.AppendLine(", Доставка: " + Shipping.ShippingType);
                 TotalCost += Shipping.ShippingCost;
             }
             // Add tax
@@ -119,8 +119,7 @@ namespace VacationReservations.DataAccess
             {
                 double taxAmount = Math.Round(TotalCost * Tax.TaxPercentage,
                 MidpointRounding.AwayFromZero) / 100.0;
-                sb.AppendLine("Ддс: " + Tax.TaxType + " лв "
-                + taxAmount.ToString());
+                sb.AppendLine($"{Tax.TaxType}, {taxAmount.ToString()} лв.");
                 TotalCost += taxAmount;
             }
             sb.AppendLine();

@@ -26,4 +26,12 @@
     <strong>Детайли на поръчка:</strong>
     <br />
     <asp:Label runat="server" ID="orderLabel" />
+    <br />
+    <br />
+    <strong>Процес на поръчката:</strong>
+    <br />
+    <asp:Button ID="processButton" runat="server" Text="Напред"
+        Enabled="False" OnClick="processButton_Click" />
+    <br />
+    <asp:Label ID="processResultLabel" runat="server" />
 </asp:Content>

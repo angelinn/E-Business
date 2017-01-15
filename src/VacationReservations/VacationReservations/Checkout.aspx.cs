@@ -7,6 +7,7 @@ using System.Web.Profile;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using VacationReservations.Common;
+using VacationReservations.Common.Orders;
 using VacationReservations.DataAccess;
 
 namespace VacationReservations
@@ -107,6 +108,9 @@ namespace VacationReservations
             // Create the order and store the order ID
             string orderId =
             ShoppingCartAccess.CreateCommerceLibOrder(shippingId, taxId);
+            // Process order
+            OrderProcessor processor = new OrderProcessor(orderId);
+            processor.Process();
             // Redirect to the conformation page
             Response.Redirect("OrderPlaced.aspx");
         }

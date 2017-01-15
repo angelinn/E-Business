@@ -108,6 +108,35 @@ namespace VacationReservations.DataAccess
             }
             return result;
         }
+
+        public static void CreateAudit(int orderID, string message, int messageNumber)
+        {
+            // get a configured DbCommand object
+            DbCommand comm = GenericDataAccess.CreateCommand();
+            // set the stored procedure name
+            comm.CommandText = "CreateAudit";
+            // create a new parameter
+            DbParameter param = comm.CreateParameter();
+            param.ParameterName = "@OrderID";
+            param.Value = orderID;
+            param.DbType = DbType.Int32;
+            comm.Parameters.Add(param);
+            // create a new parameter
+            param = comm.CreateParameter();
+            param.ParameterName = "@Message";
+            param.Value = message;
+            param.DbType = DbType.String;
+            param.Size = 512;
+            comm.Parameters.Add(param);
+            // create a new parameter
+            param = comm.CreateParameter();
+            param.ParameterName = "@MessageNumber";
+            param.Value = messageNumber;
+            param.DbType = DbType.Int32;
+            comm.Parameters.Add(param);
+            // execute the stored procedure
+            GenericDataAccess.ExecuteNonQuery(comm);
+        }
     }
 
 }
