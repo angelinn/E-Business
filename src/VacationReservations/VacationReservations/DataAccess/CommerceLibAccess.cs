@@ -80,6 +80,34 @@ namespace VacationReservations.DataAccess
             new CommerceLibOrderInfo(orderRow);
             return orderInfo;
         }
+
+        public static List<ShippingInfo> GetShippingInfo(int shippingRegionId)
+        {
+            // get a configured DbCommand object
+            DbCommand comm = GenericDataAccess.CreateCommand();
+            // set the stored procedure name
+            comm.CommandText = "CommerceLibShippingGetInfo";
+            // create a new parameter
+            DbParameter param = comm.CreateParameter();
+            param.ParameterName = "@ShippingRegionId";
+            param.Value = shippingRegionId;
+            param.DbType = DbType.Int32;
+            comm.Parameters.Add(param);
+            // obtain the results
+            DataTable table = GenericDataAccess.ExecuteSelectCommand(comm);
+            List<ShippingInfo> result = new List<ShippingInfo>();
+            foreach (DataRow row in table.Rows)
+            {
+                ShippingInfo rowData = new ShippingInfo();
+                rowData.ShippingID = int.Parse(row["ShippingId"].ToString());
+                rowData.ShippingType = row["ShippingType"].ToString();
+                rowData.ShippingCost =
+                double.Parse(row["ShippingCost"].ToString());
+                rowData.ShippingRegionId = shippingRegionId;
+                result.Add(rowData);
+            }
+            return result;
+        }
     }
 
 }

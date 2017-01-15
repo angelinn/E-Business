@@ -148,6 +148,7 @@
     <Content Include="Sql\CatalogUpdateDepartment.sql" />
     <Content Include="Sql\CatalogUpdateProduct.sql" />
     <Content Include="Sql\CommerceLibOrderGetInfo.sql" />
+    <Content Include="Sql\CommerceLibShippingGetInfo.sql" />
     <Content Include="Sql\CreateCustomerOrder.sql" />
     <Content Include="Sql\CreateOrder.sql" />
     <Content Include="Sql\OrderChanges.sql" />

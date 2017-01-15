@@ -68,18 +68,47 @@ namespace VacationReservations
                 InfoLabel.Text = "Моля потвърдете, че детайлите по-горе са вярни преди извършване на поръчката.";
             }
             placeOrderButton.Visible = addressOK && cardOK;
+            shippingSelection.Visible = addressOK && cardOK;
+            // Populate shipping selection
+            if (addressOK && cardOK)
+            {
+                int shippingRegionId = int.Parse((string)Profile["ShippingRegion"]);
+                List<ShippingInfo> shippingInfoData =
+                CommerceLibAccess.GetShippingInfo(shippingRegionId);
+                foreach (ShippingInfo shippingInfo in shippingInfoData)
+                {
+                    shippingSelection.Items.Add(
+                    new ListItem(shippingInfo.ShippingType,
+                    shippingInfo.ShippingID.ToString()));
+                }
+                shippingSelection.SelectedIndex = 0;
+            }
         }
 
         protected void placeOrderButton_Click(object sender, EventArgs e)
         {
             // Store the total amount
             decimal amount = ShoppingCartAccess.GetTotalAmount();
+            // Get shipping ID or default to 0
+            int shippingId = 0;
+            int.TryParse(shippingSelection.SelectedValue, out shippingId);
+            // Get tax ID or default to "No tax"
+            string shippingRegion = HttpContext.Current.Profile["ShippingRegion"] as string;
+            int taxId;
+            switch (shippingRegion)
+            {
+                case "2":
+                    taxId = 1;
+                    break;
+                default:
+                    taxId = 2;
+                    break;
+            }
             // Create the order and store the order ID
-            string orderId = ShoppingCartAccess.CreateCommerceLibOrder();
-            // Redirect to the confirmation page
+            string orderId =
+            ShoppingCartAccess.CreateCommerceLibOrder(shippingId, taxId);
+            // Redirect to the conformation page
             Response.Redirect("OrderPlaced.aspx");
         }
-        
     }
 }
-

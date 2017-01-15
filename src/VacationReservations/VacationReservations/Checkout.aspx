@@ -28,10 +28,14 @@
         CssClass="ProductPrice" />
     <br />
     <br />
-    <uc1:customerdetailsedit id="CustomerDetailsEdit1"
-        runat="server" editable="false" title="User Details" />
+    <uc1:CustomerDetailsEdit ID="CustomerDetailsEdit1"
+        runat="server" Editable="false" title="User Details" />
     <br />
     <asp:Label ID="InfoLabel" runat="server" />
+    <br />
+    <br />
+    Изберете доставка:
+ <asp:DropDownList ID="shippingSelection" runat="server" />
     <br />
     <br />
     <asp:Button ID="placeOrderButton" runat="server"
